@@ -1,0 +1,84 @@
+name: AI-VOS
+full_name: AI Virtual Operating System
+version: "0.1"
+status: foundation
+
+purpose: "Reusable AI operating system framework for managing and developing projects."
+
+principles:
+  repository_is_source_of_truth: true
+  chat_history_is_permanent_memory: false
+  human_executor_required: true
+  step_by_step_execution: true
+  confirmation_required_before_operations: true
+
+layers:
+  startup:
+    status: active
+    files:
+      - AI-ENTRY.md
+      - AI-BOOT-PROTOCOL.md
+
+  memory:
+    status: active
+    files:
+      - CURRENT_STATE.md
+      - DECISIONS.md
+
+  project_control:
+    status: active
+    files:
+      - PROJECT.yaml
+      - PROJECT-LIFECYCLE.md
+      - TASK-MANAGEMENT.md
+
+  organization:
+    status: active
+    files:
+      - AI-ORGANIZATION.md
+
+  templates:
+    status: planned
+    path: templates/
+
+  runtime:
+    status: planned
+    path: runtime/
+
+development:
+  phase: foundation
+
+  completed:
+    - repository_initialization
+    - ai_boot_protocol
+    - decision_memory
+    - project_lifecycle
+    - ai_organization
+    - task_management
+
+  next:
+    - project_templates
+    - execution_runtime
+    - automation_workflows
+
+repository:
+  name: ai-vos-development
+  branch: main
+  source_control: git
+
+rules:
+  - "AI must not assume missing information."
+  - "AI must work step by step."
+  - "Human confirmation is required before operational changes."
+  - "Permanent decisions must be stored in repository files."
+
+roles:
+  ai:
+    responsibility: planning_and_intelligence
+
+  human:
+    responsibility: operational_execution
+
+continuity:
+  objective: "Allow any compatible AI system to continue development from repository information."
+  memory: repository
