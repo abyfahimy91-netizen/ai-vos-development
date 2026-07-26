@@ -1,0 +1,46 @@
+project:
+  name: ""
+  version: "0.1"
+  status: "idea"
+  owner: ""
+  start_date: ""
+
+business:
+  problem: ""
+  solution: ""
+  target_customer: ""
+  business_model: ""
+
+product:
+  stage: "idea"
+  mvp_status: "not_started"
+  core_features: []
+
+technology:
+  architecture: ""
+  backend: ""
+  frontend: ""
+  database: ""
+  infrastructure: ""
+
+management:
+  current_phase: ""
+  goals: []
+  open_decisions: []
+
+ai_operation:
+  ai_role:
+    - business_analysis
+    - product_management
+    - technical_planning
+    - marketing_strategy
+
+  human_executor_role:
+    - execute_commands
+    - provide_external_information
+    - confirm_operations
+
+rules:
+  source_of_truth: "repository"
+  context_protection: true
+  human_confirmation_required: true
