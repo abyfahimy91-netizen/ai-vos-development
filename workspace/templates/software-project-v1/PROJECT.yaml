@@ -1,0 +1,110 @@
+# AI-VOS Software Project Definition
+
+version: "1.0"
+
+project:
+
+  name: ""
+
+  description: ""
+
+  type: software
+
+  status: planning
+
+  version: "0.1.0"
+
+  created_date: ""
+
+  last_update: ""
+
+  owner: ""
+
+
+repository:
+
+  provider: GitHub
+
+  url: ""
+
+  branch: main
+
+
+team:
+
+  project_manager: ""
+
+  developers:
+
+    - ""
+
+  reviewers:
+
+    - ""
+
+
+technology:
+
+  stack:
+
+    backend: ""
+
+    frontend: ""
+
+    database: ""
+
+    infrastructure: ""
+
+
+environment:
+
+  development:
+
+    url: ""
+
+    server: ""
+
+  production:
+
+    url: ""
+
+    server: ""
+
+
+documentation:
+
+  root: documentation/
+
+  architecture: architecture/
+
+  operations: operations/
+
+
+current_phase:
+
+  name: ""
+
+  description: ""
+
+
+quality:
+
+  testing_required: true
+
+  documentation_required: true
+
+  security_review_required: true
+
+
+ai_management:
+
+  repository_is_memory: true
+
+  chat_history_is_temporary: true
+
+  human_confirmation_required: true
+
+
+notes:
+
+  ""
