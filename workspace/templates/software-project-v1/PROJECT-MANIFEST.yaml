@@ -1,0 +1,330 @@
+# AI-VOS Software Project Manifest Template
+
+version: "1.1"
+
+project:
+
+  name: ""
+
+  description: ""
+
+  type: software
+
+  status: initialization
+
+  phase: planning
+
+  created_date: ""
+
+  owner: ""
+
+
+management:
+
+  methodology: ""
+
+  priority: medium
+
+  risk_level: medium
+
+  project_manager: ""
+
+  stakeholders:
+
+    business_owner: ""
+
+    technical_owner: ""
+
+    users: ""
+
+
+business:
+
+  purpose: ""
+
+  business_domain: ""
+
+  target_users: ""
+
+  objectives:
+
+    - ""
+
+  scope:
+
+    included:
+
+      - ""
+
+    excluded:
+
+      - ""
+
+
+product:
+
+  vision: ""
+
+  problems_to_solve:
+
+    - ""
+
+  main_features:
+
+    - ""
+
+  expected_outputs:
+
+    - ""
+
+  roadmap_reference:
+
+    file: ROADMAP.md
+
+
+localization:
+
+  country: Iran
+
+  language: Persian
+
+  locale: fa-IR
+
+  direction: RTL
+
+  timezone: Asia/Tehran
+
+  calendar: Jalali
+
+  number_format: Persian
+
+  currency:
+
+    storage: IRR
+
+    display: Toman
+
+
+technology:
+
+  backend:
+
+    technology: ""
+
+    version: ""
+
+  frontend:
+
+    technology: ""
+
+    version: ""
+
+  mobile:
+
+    technology: ""
+
+    version: ""
+
+  database:
+
+    technology: ""
+
+    version: ""
+
+  infrastructure:
+
+    hosting: ""
+
+    deployment_method: ""
+
+    environment:
+
+      development: ""
+
+      production: ""
+
+
+architecture:
+
+  style: ""
+
+  principles:
+
+    - ""
+
+  scalability_required: true
+
+  maintainability_required: true
+
+
+security:
+
+  level: standard
+
+  requirements:
+
+    authentication:
+
+      required: true
+
+    authorization:
+
+      required: true
+
+    data_protection:
+
+      required: true
+
+    secure_coding:
+
+      required: true
+
+    logging:
+
+      required: true
+
+    backup:
+
+      required: true
+
+
+quality:
+
+  standards:
+
+    coding_standard: ""
+
+    documentation_standard: ""
+
+    testing_standard: ""
+
+  requirements:
+
+    performance:
+
+      required: true
+
+    reliability:
+
+      required: true
+
+    scalability:
+
+      required: true
+
+
+ai_operation:
+
+  rules:
+
+    read_repository_first: true
+
+    avoid_assumptions: true
+
+    explain_before_changes: true
+
+    request_human_confirmation:
+
+      operational_changes: true
+
+      architectural_changes: true
+
+    update_documentation_after_decisions: true
+
+
+documentation_map:
+
+  project_memory:
+
+    current_state:
+
+      file: CURRENT_STATE.md
+
+    decisions:
+
+      file: DECISIONS.md
+
+    tasks:
+
+      file: NEXT_TASK.md
+
+    roadmap:
+
+      file: ROADMAP.md
+
+
+  business:
+
+    brd:
+
+      file: documentation/BRD.md
+
+
+  product:
+
+    prd:
+
+      file: documentation/PRD.md
+
+
+  design:
+
+    ux_ui:
+
+      file: documentation/UX-UI-DESIGN.md
+
+
+  architecture:
+
+    technical_design:
+
+      file: architecture/TDD.md
+
+    database:
+
+      file: architecture/DATABASE-DESIGN.md
+
+    api:
+
+      file: architecture/API-DESIGN.md
+
+
+  security:
+
+    file: architecture/SECURITY-DESIGN.md
+
+
+  operations:
+
+    deployment:
+
+      file: operations/DEPLOYMENT.md
+
+    testing:
+
+      file: operations/TEST-PLAN.md
+
+
+version_control:
+
+  system: Git
+
+  branch_strategy: ""
+
+  commit_rules: ""
+
+  change_log_required: true
+
+
+project_memory:
+
+  source_of_truth: repository
+
+  chat_history:
+
+    permanent_memory: false
+
+
+notes:
+
+  ""
