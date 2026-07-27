@@ -176,3 +176,63 @@ workspace/
     └── base-project/
 
 The base project template will be used as the starting structure for all future projects unless a documented exception exists.
+---
+
+# Decision 006: Project Continuity Model
+
+Date:
+
+Version: 0.3
+
+Decision:
+
+AI-VOS must support both new project creation and continuation of existing projects.
+
+The system is not only responsible for initializing projects.
+It must also understand the current state of incomplete projects and continue development from repository information.
+
+Project lifecycle contains two primary workflows:
+
+1. New Project Workflow
+
+Purpose:
+
+Create a new project from a reusable template.
+
+Process:
+
+- Understand project requirements.
+- Select appropriate template.
+- Request human confirmation.
+- Initialize project structure.
+- Create initial project state.
+
+
+2. Existing Project Continuation Workflow
+
+Purpose:
+
+Allow any compatible AI system to continue an existing project.
+
+Process:
+
+- Load project repository.
+- Read project boot information.
+- Analyze current state.
+- Read decisions and previous tasks.
+- Identify incomplete work.
+- Propose next actions.
+- Continue only after human confirmation.
+
+
+Rules:
+
+- Repository is the source of project memory.
+- Chat history is temporary context only.
+- Project state must be stored in files.
+- AI must not assume previous conversations.
+- Major project decisions must be documented.
+
+Principle:
+
+A project managed by AI-VOS must be recoverable and continuable from repository information alone.
