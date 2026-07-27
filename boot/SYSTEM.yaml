@@ -28,7 +28,7 @@ boot_sequence:
     purpose: Load system architecture and capabilities.
 
   - step: 4
-    file: core/CURRENT_STATE.md
+    file: core/CURRENT-SYSTEM-STATE.md
     purpose: Load the current repository state.
 
   - step: 5

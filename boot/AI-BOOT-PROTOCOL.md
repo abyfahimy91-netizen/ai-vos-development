@@ -34,7 +34,7 @@ The AI must read documents in this order:
 Purpose:
 Understand operating rules.
 
-2. CURRENT_STATE.md
+2. core/CURRENT-SYSTEM-STATE.md
 
 Purpose:
 Understand current project condition.
@@ -143,7 +143,7 @@ After major changes:
 
 AI must update:
 
-- CURRENT_STATE.md
+- core/CURRENT-SYSTEM-STATE.md
 - DECISIONS.md
 - NEXT_TASK.md
 

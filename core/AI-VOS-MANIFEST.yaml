@@ -22,7 +22,7 @@ layers:
   memory:
     status: active
     files:
-      - CURRENT_STATE.md
+      - CURRENT-SYSTEM-STATE.md
       - DECISIONS.md
 
   project_control:
