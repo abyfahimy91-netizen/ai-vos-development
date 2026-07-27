@@ -1,0 +1,83 @@
+system:
+  name: AI-VOS
+  full_name: AI Virtual Operating System
+  version: "0.2"
+  status: active
+
+entry_point:
+  description: >
+    This file is the official bootstrap entry point for every AI system.
+    Every compatible AI must start here before reading any other project file.
+
+boot_sequence:
+
+  - step: 0
+    file: SYSTEM.yaml
+    purpose: Verify system identity and initialize boot process.
+
+  - step: 1
+    file: AI-ENTRY.md
+    purpose: Load AI operating principles.
+
+  - step: 2
+    file: AI-BOOT-PROTOCOL.md
+    purpose: Load startup behavior and execution protocol.
+
+  - step: 3
+    file: AI-VOS-MANIFEST.yaml
+    purpose: Load system architecture and capabilities.
+
+  - step: 4
+    file: CURRENT_STATE.md
+    purpose: Load the current repository state.
+
+  - step: 5
+    file: DECISIONS.md
+    purpose: Load permanent architectural and project decisions.
+
+  - step: 6
+    file: PROJECT.yaml
+    purpose: Load project definition and metadata.
+
+  - step: 7
+    file: ROADMAP.md
+    purpose: Load long-term development roadmap.
+
+  - step: 8
+    file: NEXT_TASK.md
+    purpose: Identify the current objective.
+
+  - step: 9
+    file: TASK-MANAGEMENT.md
+    purpose: Load task execution workflow and completion rules.
+
+startup_rules:
+
+  - Never assume missing information.
+  - Repository is the single source of truth.
+  - Chat history is temporary context only.
+  - Read only the files required by the boot sequence.
+  - Execute the boot sequence in order.
+  - Ask for human confirmation before operational changes.
+  - Record important decisions in repository files.
+  - Update documentation after major architectural changes.
+
+boot_completion:
+
+  description: >
+    After successfully completing the boot sequence,
+    the AI is authorized to begin the task defined
+    in NEXT_TASK.md while following TASK-MANAGEMENT.md.
+
+roles:
+
+  ai:
+    responsibility: Planning, reasoning, documentation and guidance.
+
+  human:
+    responsibility: Execute commands, validate results and approve operational actions.
+
+final_principle:
+  repository_is_memory: true
+  repository_is_authoritative: true
+  boot_starts_here: SYSTEM.yaml
