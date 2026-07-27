@@ -508,3 +508,113 @@ The system evolves from practical usage, not only theoretical design.
 
 Approved for AI-VOS version 0.3 development.
 
+---
+
+# Decision 008: System State Document Standardization
+
+Date:
+
+Version: 0.3
+
+Subject:
+
+Standardization of AI-VOS system state document
+
+
+## Context
+
+AI-VOS requires a single official source for understanding the current development state of the system.
+
+During repository evolution, two state documents were created:
+
+- core/CURRENT_STATE.md
+- core/CURRENT-SYSTEM-STATE.md
+
+The existence of multiple active-looking state files can create ambiguity for new AI systems during continuity recovery.
+
+
+## Analysis
+
+The repository review identified:
+
+### Official active state document
+
+```
+core/CURRENT-SYSTEM-STATE.md
+```
+
+Characteristics:
+
+- Version 0.3.
+- Contains current architecture status.
+- Contains completed components.
+- Contains implemented Engines.
+- Contains current limitations.
+- Contains continuity validation objectives.
+
+
+### Legacy document
+
+```
+core/CURRENT_STATE.md
+```
+
+Characteristics:
+
+- Belongs to earlier AI-VOS development phase.
+- Represents version 0.2 foundation state.
+- Has been archived.
+- Must not be used as the active system state reference.
+
+
+## Decision
+
+AI-VOS will use:
+
+```
+core/CURRENT-SYSTEM-STATE.md
+```
+
+as the only official active system state document.
+
+
+The file:
+
+```
+core/CURRENT_STATE.md
+```
+
+will remain as an archived historical document.
+
+It must not be used as the current operational state source.
+
+
+## Migration Rule
+
+All active AI-VOS documentation and configuration files must reference:
+
+```
+core/CURRENT-SYSTEM-STATE.md
+```
+
+instead of:
+
+```
+core/CURRENT_STATE.md
+```
+
+
+## Impact
+
+This decision improves:
+
+- AI continuity.
+- Repository clarity.
+- Startup reliability.
+- Prevention of conflicting system states.
+- Future Engine operation.
+
+
+## Status
+
+Approved for AI-VOS version 0.3 development.
