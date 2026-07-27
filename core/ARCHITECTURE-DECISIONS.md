@@ -388,3 +388,65 @@ Each engine will have its own documentation and lifecycle.
 
 Approved for AI-VOS version 0.3 development.
 
+
+---
+
+# Decision 006: Requirement Analysis Engine Output Contract
+
+Date:
+
+Version: 0.3
+
+Subject:
+
+Standard output contract for Requirement Analysis Engine
+
+
+## Context
+
+AI-VOS requires a reliable process before starting product design, architecture selection and software development.
+
+Without structured requirement analysis, AI systems may make incorrect assumptions and select unsuitable solutions.
+
+
+## Decision
+
+The Requirement Analysis Engine is responsible for creating structured project understanding before other AI-VOS engines operate.
+
+The engine outputs must be stored as documented project knowledge.
+
+
+## Standard Outputs
+
+Requirement Analysis Engine may produce:
+
+- REQUIREMENTS-ANALYSIS.md
+- PROJECT-SCOPE.md
+- BRD.md
+- PRD.md
+- USER-STORIES.md
+- USE-CASES.md
+- RISK-ANALYSIS.md
+- OPEN-QUESTIONS.md
+
+
+## Rules
+
+- Output documents must be version controlled.
+- Important decisions must be traceable.
+- Other engines must use approved analysis outputs.
+- Missing information must remain visible.
+- AI must not silently fill unknown requirements.
+
+
+## Impact
+
+Future AI-VOS engines depend on structured requirement analysis.
+
+Architecture decisions, technology selection and development planning must be based on documented requirements.
+
+
+## Status
+
+Approved for AI-VOS version 0.3 development.
+
