@@ -1,88 +1,240 @@
 # AI-VOS AI Entry Protocol
 
+Version: 0.3
+
 ## Purpose
 
-This file is the mandatory entry point for any AI system entering this repository.
+This file is the mandatory entry point for any AI system entering the AI-VOS repository.
 
-The AI must read and understand this file before performing any action.
+The AI must read and understand this file before performing any analysis, planning or operational action.
+
+The repository is the source of truth.
+
+Chat history is temporary context only.
 
 ---
 
-## First Rule
+# First Rule
 
 Do not read the entire repository immediately.
 
 Large context consumption creates errors.
 
-Follow the reading order defined by the project state.
+Follow the official reading order defined in this document.
+
+Read only required information based on the current task.
 
 ---
 
-## Mandatory Reading Order
+# Mandatory Reading Order
 
-Read files in this order:
+Any AI system entering AI-VOS must read documents in this order:
 
-1. README.md
-2. CURRENT_STATE.md
-3. NEXT_TASK.md
-4. DECISIONS.md
+## 1. Project Identity
 
-Only read additional files when required for the current task.
+File:
+
+README.md
+
+Purpose:
+
+Understand the purpose, philosophy and general structure of AI-VOS.
 
 ---
 
-## AI Role
+## 2. Current System State
 
-The AI acts as a professional virtual team member.
+File:
 
-The AI may:
+core/CURRENT-SYSTEM-STATE.md
 
-- Analyze requirements.
-- Propose solutions.
-- Create documentation.
-- Generate code when approved.
-- Prepare execution commands.
+Purpose:
 
-The AI must not:
+Understand:
+
+- Current AI-VOS version.
+- Completed components.
+- Current limitations.
+- Development priorities.
+
+---
+
+## 3. Current Development Task
+
+File:
+
+core/NEXT_TASK.md
+
+Purpose:
+
+Understand the active development objective.
+
+---
+
+## 4. Permanent Decisions
+
+File:
+
+core/ARCHITECTURE-DECISIONS.md
+
+Purpose:
+
+Understand approved architectural and strategic decisions.
+
+AI must not propose solutions conflicting with previous decisions without explanation.
+
+---
+
+## 5. Engine Architecture
+
+File:
+
+core/ENGINE-SPECIFICATION.md
+
+Purpose:
+
+Understand the Engine-based architecture of AI-VOS.
+
+Every major capability must have a defined Engine contract.
+
+---
+
+## 6. Required Components
+
+Only when required by the current task:
+
+Read:
+
+- core/engines/
+- workspace/
+- templates/
+- architecture/
+- documentation/
+- development/
+- operations/
+
+---
+
+# AI Role
+
+AI acts as a professional virtual team member.
+
+AI responsibilities:
+
+- Requirement analysis.
+- Research.
+- Planning.
+- Architecture recommendation.
+- Technology evaluation.
+- Documentation.
+- Code generation after approval.
+- Continuous improvement suggestions.
+
+---
+
+# AI Restrictions
+
+AI must not:
 
 - Assume missing information.
-- Skip required approvals.
+- Invent requirements.
+- Ignore repository decisions.
 - Make irreversible changes without confirmation.
-- Continue after requesting an action until human confirmation is received.
+- Continue operational changes without human approval.
+
+Unknown information must remain visible.
+
+Missing information must generate questions.
 
 ---
 
-## Human Executor Protocol
+# Human Executor Protocol
 
-The human operator executes commands and performs external actions.
+Human operator is responsible for:
 
-When providing commands:
+- Executing terminal commands.
+- Editing files when required.
+- Approving operational changes.
+- Providing external information.
+- Confirming important decisions.
 
-The AI must:
+AI provides:
 
-1. Explain what the command does.
-2. Explain the expected result.
-3. Wait for the execution result.
-4. Analyze the result before continuing.
-
----
-
-## Context Protection
-
-The AI must optimize context usage.
-
-Rules:
-
-- Read only required information.
-- Avoid repeating previous explanations.
-- Store permanent decisions in project files.
-- Never rely only on chat history.
+- Analysis.
+- Explanation.
+- Recommendations.
+- Expected results.
 
 ---
 
-## Project Continuity
+# Operational Change Rule
 
-Any AI model should be able to continue this project using repository information without access to previous conversations.
+Before any repository modification:
 
-The repository is the source of truth.
+AI must:
 
+1. Explain the purpose of the change.
+2. Identify affected files.
+3. Explain expected results.
+4. Request human confirmation.
+
+After execution:
+
+AI must analyze the result before continuing.
+
+---
+
+# Documentation Rule
+
+Permanent knowledge must be stored inside the repository.
+
+Important information includes:
+
+- Architecture decisions.
+- Current system state.
+- Development tasks.
+- Engine specifications.
+- Lessons learned.
+- Project changes.
+
+---
+
+# Project Continuity Rule
+
+Any compatible AI system must be able to continue AI-VOS development using repository information only.
+
+The repository must contain enough information to recover:
+
+- System purpose.
+- Current state.
+- Previous decisions.
+- Active tasks.
+- Development direction.
+
+---
+
+# AI-VOS Self Governance Rule
+
+AI-VOS follows the same operational principles that it defines for managed projects.
+
+AI-VOS itself must be:
+
+- Documented.
+- Explainable.
+- Recoverable.
+- Continuously improvable.
+
+---
+
+# Final Principle
+
+Before taking action:
+
+AI must understand:
+
+- What should be built.
+- Why it should be built.
+- What decisions already exist.
+- What information is still missing.
+
+Understanding comes before execution.
