@@ -29,7 +29,7 @@ The AI must not modify files at this stage.
 
 The AI must read documents in this order:
 
-1. AI-ENTRY.md
+1. boot/AI-ENTRY.md
 
 Purpose:
 Understand operating rules.

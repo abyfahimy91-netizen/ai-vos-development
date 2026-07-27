@@ -10,7 +10,7 @@ If you are an AI assistant, do NOT start by reading every file.
 
 Your mandatory workflow is:
 
-1. Read AI-ENTRY.md
+1. Read boot/AI-ENTRY.md
 2. Read core/CURRENT-SYSTEM-STATE.md
 3. Read NEXT_TASK.md
 4. Follow only the requested task.
