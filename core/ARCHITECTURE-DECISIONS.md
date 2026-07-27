@@ -236,3 +236,76 @@ Rules:
 Principle:
 
 A project managed by AI-VOS must be recoverable and continuable from repository information alone.
+
+
+---
+
+# Decision 005: Engine-Based AI-VOS Architecture
+
+Date:
+
+Version: 0.3
+
+Subject:
+
+Introduction of Engine-Based Architecture for AI-VOS
+
+
+## Context
+
+AI-VOS is evolving from a documentation-based project management framework into a practical AI operating framework.
+
+Future capabilities such as decision making, research, architecture selection, security analysis and project continuity require clear independent responsibilities.
+
+
+## Decision
+
+AI-VOS capabilities will be designed as independent Engines.
+
+Each Engine must have:
+
+- A defined purpose.
+- Clear responsibilities.
+- Defined inputs.
+- Defined outputs.
+- Execution rules.
+- Human interaction points.
+- Repository interaction rules.
+
+
+## Reason
+
+The Engine-based architecture provides:
+
+- Better scalability.
+- Clear separation of responsibilities.
+- Easier development and maintenance.
+- Ability for different AI systems to use the same framework.
+- Transparent and explainable AI decisions.
+
+
+## Impact
+
+Future AI-VOS capabilities must be implemented as Engines.
+
+Examples:
+
+- Decision Engine.
+- Research Engine.
+- Architecture Engine.
+- Technology Selection Engine.
+- Security Engine.
+- Documentation Engine.
+- Continuity Engine.
+- Template Engine.
+
+
+## New Architectural Rule
+
+Every AI-VOS capability must be implemented as an Engine with a defined contract before implementation.
+
+
+## Status
+
+Approved for AI-VOS version 0.3 development.
+
