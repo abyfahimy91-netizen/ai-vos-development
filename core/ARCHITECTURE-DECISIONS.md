@@ -144,3 +144,35 @@ Any major architectural change must be:
 1. Explained.
 2. Recorded here.
 3. Approved before implementation.
+---
+
+# Decision 005: Minimal Template Strategy
+
+Date:
+
+Version: 0.2
+
+Decision:
+
+AI-VOS starts with a single generic project template.
+
+The system will not create multiple specialized templates until real usage demonstrates a clear need.
+
+Reason:
+
+A minimal template reduces architectural complexity, simplifies AI reasoning, and makes the system easier for human executors to understand.
+
+Rules:
+
+- One generic template is the default starting point.
+- Specialized templates must only be created after repeated practical use cases.
+- Every new template must have a documented purpose.
+- Template growth must remain controlled.
+
+Expected Initial Template:
+
+workspace/
+└── templates/
+    └── base-project/
+
+The base project template will be used as the starting structure for all future projects unless a documented exception exists.
