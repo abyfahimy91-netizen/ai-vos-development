@@ -450,3 +450,61 @@ Architecture decisions, technology selection and development planning must be ba
 
 Approved for AI-VOS version 0.3 development.
 
+
+---
+
+# Decision 007: Real Project Validation Principle
+
+Date:
+
+Version: 0.3
+
+Subject:
+
+Validation of AI-VOS through real project scenarios
+
+
+## Context
+
+AI-VOS contains reusable architectures, templates and engines.
+
+However, theoretical design alone cannot prove that the system can manage real software projects effectively.
+
+
+## Decision
+
+Every major AI-VOS capability must be tested through real project scenarios before becoming an official system capability.
+
+
+## Validation Requirements
+
+Each validation scenario must evaluate:
+
+- Requirement understanding.
+- Documentation generation.
+- Architecture decisions.
+- Technology selection.
+- Security considerations.
+- Development planning.
+- Continuity capability.
+
+
+## Rules
+
+- Test results must be documented.
+- Identified weaknesses must improve AI-VOS architecture.
+- Templates and engines must evolve based on practical experience.
+- No capability becomes final without validation.
+
+
+## Impact
+
+AI-VOS will continuously improve through real project feedback.
+
+The system evolves from practical usage, not only theoretical design.
+
+
+## Status
+
+Approved for AI-VOS version 0.3 development.
+
