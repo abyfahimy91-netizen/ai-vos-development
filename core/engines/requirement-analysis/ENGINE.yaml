@@ -1,0 +1,104 @@
+# AI-VOS Requirement Analysis Engine
+
+engine:
+
+  name: Requirement Analysis Engine
+
+  version: "1.0"
+
+  status: development
+
+  purpose: >
+    Transform initial human project ideas into structured requirements
+    that can be understood by AI systems and used by other project engines.
+
+
+responsibility:
+
+  primary:
+    - Analyze project requests.
+    - Identify required information.
+    - Detect missing requirements.
+    - Prepare structured project understanding.
+
+  not_responsible_for:
+    - Final business decisions.
+    - Architecture implementation.
+    - Software development execution.
+    - Human approval.
+
+
+inputs:
+
+  required:
+
+    - Human project request
+    - Initial project description
+
+  optional:
+
+    - Existing project documentation
+    - Market information
+    - Previous decisions
+    - Technical constraints
+
+
+outputs:
+
+  produces:
+
+    - Requirement analysis report
+    - Missing information list
+    - Clarification questions
+    - Initial project understanding
+
+
+dependencies:
+
+  required_engines:
+
+    - None
+
+
+repository:
+
+  reads:
+
+    - PROJECT-MANIFEST.yaml
+    - PROJECT.yaml
+    - CURRENT_STATE.md
+    - DECISIONS.md
+
+  updates:
+
+    - Project documentation
+    - Requirement documents
+
+
+human_interaction:
+
+  approval_required:
+
+    - Before creating project documents
+    - Before major assumptions
+    - Before operational changes
+
+
+rules:
+
+  - Repository is the source of truth.
+  - AI must not assume missing information.
+  - Unclear requirements must generate questions.
+  - Important decisions must be documented.
+
+
+lifecycle:
+
+  stages:
+
+    - Initialization
+    - Information collection
+    - Requirement analysis
+    - Report generation
+    - Human review
+    - Documentation update
