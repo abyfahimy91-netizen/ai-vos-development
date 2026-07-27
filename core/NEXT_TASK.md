@@ -1,37 +1,50 @@
 # AI-VOS Next Task
 
+Version: 0.3
+
 ## Current Phase
 
-Version 0.2 - Foundation to Operational Transition
+Foundation and Architecture Development - Operationalization
 
 
 ## Current Mission
 
-Transform AI-VOS from a documented foundation into a practical AI-guided project operating framework.
+Transform AI-VOS from an architectural framework into an operational AI project management system.
+
+The system must be able to guide real projects using repository-based intelligence.
 
 
 ## Current Task
 
-Define the workspace and project execution model.
+Complete the core Engine ecosystem required for AI-VOS operation.
 
 
 ## Objectives
 
-1. Define how new projects are created inside workspace.
-2. Define reusable project templates.
-3. Define interaction workflow between AI and human executor.
-4. Validate the complete AI-VOS startup and execution process.
+1. Build Continuity Engine.
+
+2. Build Architecture Decision Engine.
+
+3. Build Technology Research and Selection Engine.
+
+4. Build Security Analysis Engine.
+
+5. Improve project initialization workflow.
+
+6. Validate AI-VOS using a real software project scenario.
 
 
 ## Completion Criteria
 
 The task is complete when:
 
-- A new project can be initialized using AI-VOS structure.
-- AI can identify required information from repository files.
-- Human executor knows only the starting point.
-- Operational steps are guided by AI.
-- Important decisions are stored in repository memory.
+- A new AI system can recover project context only from repository files.
+- AI can analyze requirements before making decisions.
+- AI can recommend architecture based on documented reasoning.
+- AI can evaluate technology choices.
+- AI can identify security requirements.
+- AI can guide project execution step by step.
+- Important decisions remain stored in repository memory.
 
 
 ## Execution Rules
@@ -46,6 +59,21 @@ The task is complete when:
 
 ## Human Executor Status
 
-The human executor executes terminal commands,
-provides requested files or outputs,
-and approves operational changes.
+The human executor:
+
+- Executes terminal commands.
+- Provides requested information.
+- Reviews AI recommendations.
+- Approves operational changes.
+
+
+## Continuity Requirement
+
+Every next AI session must be able to understand:
+
+- Current system state.
+- Active development task.
+- Previous decisions.
+- Required next actions.
+
+Only repository information is considered permanent memory.
