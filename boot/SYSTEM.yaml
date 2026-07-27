@@ -12,43 +12,43 @@ entry_point:
 boot_sequence:
 
   - step: 0
-    file: SYSTEM.yaml
+    file: boot/SYSTEM.yaml
     purpose: Verify system identity and initialize boot process.
 
   - step: 1
-    file: AI-ENTRY.md
+    file: boot/AI-ENTRY.md
     purpose: Load AI operating principles.
 
   - step: 2
-    file: AI-BOOT-PROTOCOL.md
+    file: boot/AI-BOOT-PROTOCOL.md
     purpose: Load startup behavior and execution protocol.
 
   - step: 3
-    file: AI-VOS-MANIFEST.yaml
+    file: core/AI-VOS-MANIFEST.yaml
     purpose: Load system architecture and capabilities.
 
   - step: 4
-    file: CURRENT_STATE.md
+    file: core/CURRENT_STATE.md
     purpose: Load the current repository state.
 
   - step: 5
-    file: DECISIONS.md
+    file: core/DECISIONS.md
     purpose: Load permanent architectural and project decisions.
 
   - step: 6
-    file: PROJECT.yaml
+    file: core/PROJECT.yaml
     purpose: Load project definition and metadata.
 
   - step: 7
-    file: ROADMAP.md
+    file: core/ROADMAP.md
     purpose: Load long-term development roadmap.
 
   - step: 8
-    file: NEXT_TASK.md
+    file: core/NEXT_TASK.md
     purpose: Identify the current objective.
 
   - step: 9
-    file: TASK-MANAGEMENT.md
+    file: core/TASK-MANAGEMENT.md
     purpose: Load task execution workflow and completion rules.
 
 startup_rules:
@@ -67,7 +67,7 @@ boot_completion:
   description: >
     After successfully completing the boot sequence,
     the AI is authorized to begin the task defined
-    in NEXT_TASK.md while following TASK-MANAGEMENT.md.
+    in core/NEXT_TASK.md while following core/TASK-MANAGEMENT.md.
 
 roles:
 
@@ -78,6 +78,7 @@ roles:
     responsibility: Execute commands, validate results and approve operational actions.
 
 final_principle:
+
   repository_is_memory: true
   repository_is_authoritative: true
-  boot_starts_here: SYSTEM.yaml
+  boot_starts_here: boot/SYSTEM.yaml
