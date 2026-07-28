@@ -1,0 +1,42 @@
+name: Continuity Engine
+version: 0.1.0
+status: active
+description: >
+  Ensures that any compatible AI system can recover project context
+  and continue development using repository information only.
+
+responsibilities:
+  - Recover project context from repository files
+  - Identify incomplete or pending work
+  - Recommend next actions based on current state
+  - Validate repository completeness for AI handoff
+  - Update system state after each session
+  - Detect missing or outdated documentation
+
+inputs:
+  - CURRENT-SYSTEM-STATE.md
+  - NEXT_TASK.md
+  - ARCHITECTURE-DECISIONS.md
+  - ROADMAP.md
+  - Repository file structure
+
+outputs:
+  - Context Recovery Report
+  - Pending Work List
+  - Next Action Recommendations
+  - System State Update
+  - Gap Analysis Report
+
+dependencies:
+  - Requirement Analysis Engine
+
+triggers:
+  - New AI session starts
+  - Project handoff between AI systems
+  - Manual continuity check request
+
+constraints:
+  - Must not assume missing information
+  - Must flag unknowns explicitly
+  - Must not modify repository without human approval
+  - Must work with repository content only
