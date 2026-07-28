@@ -1,0 +1,68 @@
+name: Testing and Quality Engine
+version: 0.1.0
+status: active
+description: >
+  Ensures quality throughout the development lifecycle. Defines
+  testing strategies, quality criteria, review processes, and
+  acceptance standards for all project deliverables.
+
+responsibilities:
+  - Define testing strategy for the project
+  - Create quality criteria and acceptance standards
+  - Design test cases from requirements
+  - Review code and architecture for quality
+  - Track quality metrics
+  - Identify quality risks
+  - Recommend quality improvements
+
+inputs:
+  - Requirements from Requirement Analysis Engine
+  - Architecture decisions from Architecture Decision Engine
+  - Development plan from Development Planning Engine
+  - Security requirements from Security Analysis Engine
+  - Code and implementation artifacts
+  - Quality constraints from human operator
+
+outputs:
+  - Testing Strategy Document
+  - Test Cases
+  - Quality Criteria Checklist
+  - Review Report
+  - Quality Metrics Report
+  - Bug and Issue Report
+
+dependencies:
+  - Requirement Analysis Engine
+  - Architecture Decision Engine
+  - Development Planning Engine
+  - Security Analysis Engine
+
+triggers:
+  - Project initialization
+  - New feature development
+  - Code review requested
+  - Release preparation
+  - Bug reported
+  - Quality audit requested
+
+constraints:
+  - Must test against defined requirements
+  - Must include security testing
+  - Must not approve without meeting criteria
+  - Must report quality honestly
+  - Must consider edge cases and error handling
+
+quality_dimensions:
+  - Functionality: Does it work correctly?
+  - Reliability: Does it handle errors?
+  - Performance: Is it fast enough?
+  - Security: Is it safe?
+  - Maintainability: Is it clean code?
+  - Documentation: Is it documented?
+  - Usability: Is it user-friendly?
+
+testing_levels:
+  - Unit: Individual components
+  - Integration: Component interactions
+  - System: End-to-end flows
+  - Acceptance: User requirements met
