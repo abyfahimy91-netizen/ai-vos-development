@@ -1,0 +1,59 @@
+name: Development Planning Engine
+version: 0.1.0
+status: active
+description: >
+  Creates and manages development plans for projects. Breaks down
+  work into tasks, defines priorities, estimates effort, and tracks
+  progress throughout the development lifecycle.
+
+responsibilities:
+  - Break down requirements into development tasks
+  - Define task priorities and dependencies
+  - Estimate effort and timeline
+  - Create sprint or milestone plans
+  - Track progress against plan
+  - Identify blockers and risks
+  - Adjust plans based on changes
+
+inputs:
+  - Requirements from Requirement Analysis Engine
+  - Architecture decisions from Architecture Decision Engine
+  - Technology stack from Technology Selection Engine
+  - Security requirements from Security Analysis Engine
+  - Timeline constraints from human operator
+  - Team capacity from human operator
+
+outputs:
+  - Development Plan
+  - Task Breakdown
+  - Priority Matrix
+  - Milestone Schedule
+  - Progress Report
+  - Risk and Blocker Report
+
+dependencies:
+  - Requirement Analysis Engine
+  - Architecture Decision Engine
+  - Technology Selection Engine
+  - Security Analysis Engine
+
+triggers:
+  - Project initialization
+  - New requirements added
+  - Sprint or milestone planning
+  - Progress review requested
+  - Scope change detected
+
+constraints:
+  - Must respect architecture decisions
+  - Must include security tasks
+  - Must not overcommit without human approval
+  - Must flag unrealistic timelines
+  - Must account for testing and documentation
+
+planning_levels:
+  - Roadmap: Long-term direction
+  - Milestone: Major deliverables
+  - Sprint: Short-term work cycles
+  - Task: Individual work items
+  - Subtask: Detailed steps
