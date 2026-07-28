@@ -6,44 +6,26 @@ Date: 2026-07-28
 
 # Active Task
 
-Validate Engine Workflow with Real Project Scenario
+Prepare AI-VOS Version 1.0 Release & User Guide
 
 ---
 
 # Description
 
-All 8 engines and the unified workflow are defined. The next step
-is to validate the system by running through a simple project
-scenario to verify that the workflow functions correctly.
+Engine workflow validation (Scenario 01) has completed successfully.
+The next objective is to compile the final release assets, write the
+user interaction guide, and tag AI-VOS Version 1.0.
 
 ---
 
 # Acceptance Criteria
 
-- A simple test project scenario defined
-- Workflow phases executed in order
-- Information flow between engines verified
-- Human approval points tested
-- Session recovery tested
-- Issues documented and workflow adjusted
-
----
-
-# Deliverable
-
-- workspace/validation/scenario-01/
-- Updated ENGINE-WORKFLOW.md if issues found
-
----
-
-# Dependencies
-
-- ENGINE-WORKFLOW.md must be read
-- All engine specifications must be available
-- Human must participate as operator
+- User guide created under `docs/USER-GUIDE.md`
+- Core documentation finalized
+- Version 1.0 tag prepared in repository
 
 ---
 
 # Priority
 
-High - Required before version 1.0
+High — Official Milestone Release
