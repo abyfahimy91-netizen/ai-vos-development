@@ -1,0 +1,60 @@
+name: Documentation Engine
+version: 0.1.0
+status: active
+description: >
+  Manages all project documentation lifecycle. Ensures documentation
+  is complete, current, consistent, and accessible to all stakeholders
+  including future AI systems.
+
+responsibilities:
+  - Generate documentation from project artifacts
+  - Maintain documentation consistency
+  - Detect outdated documentation
+  - Create user and developer guides
+  - Manage documentation structure
+  - Ensure documentation matches implementation
+  - Generate changelogs and release notes
+
+inputs:
+  - Repository file structure
+  - Architecture decisions
+  - Engine specifications
+  - Code and configuration files
+  - Change history from git
+  - Human operator knowledge
+
+outputs:
+  - User documentation
+  - Developer documentation
+  - API documentation
+  - Changelog
+  - Release notes
+  - Documentation gap report
+
+dependencies:
+  - Continuity Engine
+  - Architecture Decision Engine
+
+triggers:
+  - New component added
+  - Architecture decision recorded
+  - Release preparation
+  - Documentation review requested
+  - Gap detected by Continuity Engine
+
+constraints:
+  - Must not generate misleading documentation
+  - Must flag undocumented components
+  - Must keep documentation in repository
+  - Must use consistent terminology
+  - Must be understandable without chat history
+
+documentation_types:
+  - README files
+  - Architecture documentation
+  - API references
+  - User guides
+  - Developer guides
+  - Decision records
+  - Changelogs
+  - Troubleshooting guides
