@@ -1,4 +1,4 @@
-# AI-VOS Architecture Decisions
+	# AI-VOS Architecture Decisions
 
 ## Purpose
 
@@ -618,3 +618,259 @@ This decision improves:
 ## Status
 
 Approved for AI-VOS version 0.3 development.
+
+---
+
+# Decision 009: AI-VOS Immutability Principle
+
+Date:
+
+2026-07-28
+
+Version:
+
+1.0
+
+Subject:
+
+Stability and controlled evolution of AI-VOS core architecture
+
+
+## Context
+
+AI-VOS is designed as an operating framework for managing multiple independent projects.
+
+During real project execution, project requirements, architectures and implementations may continuously change.
+
+Without a strict separation between AI-VOS evolution and project execution, the operating framework could become unstable.
+
+
+## Decision
+
+AI-VOS core must remain stable during project execution.
+
+Projects managed by AI-VOS must evolve independently inside their own repositories.
+
+Project activities must not directly modify AI-VOS architecture, engines or protocols.
+
+
+## Rules
+
+- AI-VOS core changes require a separate improvement process.
+- Project experiences may only create improvement proposals.
+- Improvement proposals require analysis and human approval.
+- Approved improvements are included only through versioned AI-VOS releases.
+
+
+## Impact
+
+This decision provides:
+
+- System stability.
+- Multi-project management capability.
+- Independence from specific AI providers.
+- Reliable continuity between different AI systems.
+- Controlled AI-VOS evolution.
+
+
+## Separation Principle
+
+AI-VOS:
+
+- Framework.
+- Engines.
+- Protocols.
+- Templates.
+- General knowledge.
+
+Projects:
+
+- Business data.
+- Source code.
+- Project decisions.
+- Development history.
+
+
+## Status
+
+Approved for AI-VOS version 1.0.0.
+---
+
+# Decision 010: Project Repository Initialization Model
+
+Date:
+
+2026-07-28
+
+Version:
+
+1.0
+
+Subject:
+
+Standard initialization process for AI-VOS managed projects
+
+
+## Context
+
+AI-VOS manages multiple independent projects.
+
+Each project requires its own repository, memory structure and operational history.
+
+Without a standard initialization process, projects may depend on chat history or individual AI sessions.
+
+
+## Decision
+
+Every project managed by AI-VOS must have an independent project repository and project memory structure.
+
+AI-VOS must provide initialization guidance before project execution begins.
+
+
+## Rules
+
+- Project repositories are separate from AI-VOS repository.
+- Repository creation requires human approval.
+- Project memory files belong to the project repository.
+- Project initialization does not modify AI-VOS core.
+
+
+## Impact
+
+This provides:
+
+- Multi-AI continuity.
+- Project independence.
+- Reliable project recovery.
+- Separation between framework and applications.
+
+
+## Status
+
+Approved for AI-VOS version 1.0.0.
+
+---
+
+# Decision 011: AI-VOS Project Template Standard
+
+Date:
+
+2026-07-28
+
+Version:
+
+1.0
+
+Subject:
+
+Standard project repository structure for AI-VOS managed projects
+
+
+## Context
+
+AI-VOS manages independent projects that must maintain their own memory, documentation and operational history.
+
+Without a standard project template, different projects may create inconsistent structures and reduce continuity between AI systems.
+
+
+## Decision
+
+Every new project managed by AI-VOS should start from an approved project template structure.
+
+The template defines the minimum required documentation and memory files needed for project continuity.
+
+
+## Rules
+
+- Project templates belong to AI-VOS repository.
+- Generated project repositories are independent copies of templates.
+- Templates must not contain project-specific information.
+- Projects can evolve their own structure after initialization.
+- Template changes require AI-VOS improvement process approval.
+
+
+## Standard Project Template Includes
+
+- Project identity documentation.
+- Current project state.
+- Next task tracking.
+- Decision history.
+- Business documentation.
+- Requirement documentation.
+- Architecture documentation.
+- Technical documentation.
+- Testing documentation.
+
+
+## Impact
+
+This provides:
+
+- Consistent project initialization.
+- Better multi-AI continuity.
+- Faster project recovery.
+- Reduced dependency on chat history.
+
+
+## Status
+
+Approved for AI-VOS version 1.0.0.
+
+---
+
+# Decision 012: Standard Project Initialization Workflow
+
+Date:
+
+2026-07-28
+
+Version:
+
+1.0
+
+Subject:
+
+Standard workflow for creating and connecting AI-VOS managed projects
+
+
+## Context
+
+AI-VOS manages multiple independent projects.
+
+Each project requires a standard entry process to ensure repository separation, permanent project memory and continuity between different AI systems.
+
+Without a defined initialization workflow, projects may become dependent on temporary conversations or inconsistent structures.
+
+
+## Decision
+
+Every project managed by AI-VOS must enter the system through the approved Project Initialization Workflow.
+
+The workflow defines how new projects and existing projects are analyzed, prepared and connected to AI-VOS.
+
+
+## Rules
+
+- New projects must use the approved project template.
+- Existing projects must be analyzed before continuation.
+- Project repositories remain separate from AI-VOS repository.
+- Repository creation requires human approval.
+- Project memory files are mandatory for continuity.
+- AI-VOS core must not be modified during project initialization.
+
+
+## Impact
+
+This provides:
+
+- Standard project onboarding.
+- Multi-AI compatibility.
+- Reliable project recovery.
+- Reduced dependency on chat history.
+- Controlled separation between framework and applications.
+
+
+## Status
+
+Approved for AI-VOS version 1.0.0.
+
