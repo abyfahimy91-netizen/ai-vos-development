@@ -1,0 +1,58 @@
+name: Technology Selection Engine
+version: 0.1.0
+status: active
+description: >
+  Evaluates and selects appropriate technologies for project needs.
+  Compares options based on requirements, constraints, team skills,
+  and long-term maintainability.
+
+responsibilities:
+  - Analyze technology requirements from project context
+  - Research available technology options
+  - Compare alternatives using defined criteria
+  - Recommend technology stack with rationale
+  - Document selection decisions as ADRs
+  - Re-evaluate selections when context changes
+
+inputs:
+  - Project requirements from Requirement Analysis Engine
+  - Technical constraints from human operator
+  - Architecture decisions from Architecture Decision Engine
+  - Team skill set and availability
+  - Budget and timeline constraints
+
+outputs:
+  - Technology Evaluation Report
+  - Comparison Matrix
+  - Technology Stack Recommendation
+  - ADR for technology decisions
+  - Risk Assessment for selected technologies
+
+dependencies:
+  - Requirement Analysis Engine
+  - Architecture Decision Engine
+  - Continuity Engine
+
+triggers:
+  - New project initialization
+  - Architecture decision requires technology choice
+  - Technology re-evaluation requested
+  - Major scope change
+
+constraints:
+  - Must evaluate minimum 2 alternatives per category
+  - Must consider long-term maintenance cost
+  - Must respect existing architecture decisions
+  - Must not recommend deprecated technologies
+  - Must flag skill gaps honestly
+
+evaluation_criteria:
+  - Maturity and stability
+  - Community and ecosystem size
+  - Documentation quality
+  - Performance characteristics
+  - Security track record
+  - Licensing compatibility
+  - Team familiarity
+  - Hiring availability
+  - Long-term support outlook
