@@ -1,79 +1,48 @@
 # AI-VOS Next Task
 
-Version: 0.3
+Date: 2026-07-28
 
-## Current Phase
+---
 
-Foundation and Architecture Development - Operationalization
+# Active Task
 
+Create Unified Engine Workflow
 
-## Current Mission
+---
 
-Transform AI-VOS from an architectural framework into an operational AI project management system.
+# Description
 
-The system must be able to guide real projects using repository-based intelligence.
+All 8 engines are now defined. The next step is to create a unified
+workflow document that defines how engines interact, what order they
+operate in, and how information flows between them.
 
+---
 
-## Current Task
+# Acceptance Criteria
 
-Complete the core Engine ecosystem required for AI-VOS operation.
+- Workflow document created in core/
+- Engine interaction sequence defined
+- Information flow between engines documented
+- Trigger conditions for each engine specified
+- Human approval points identified
+- Workflow validated against a simple scenario
 
+---
 
-## Objectives
+# Deliverable
 
-1. Build Continuity Engine.
+File: core/ENGINE-WORKFLOW.md
 
-2. Build Architecture Decision Engine.
+---
 
-3. Build Technology Research and Selection Engine.
+# Dependencies
 
-4. Build Security Analysis Engine.
+- All 8 engine specifications must be read
+- Architecture decisions must be respected
+- Human approval required before commit
 
-5. Improve project initialization workflow.
+---
 
-6. Validate AI-VOS using a real software project scenario.
+# Priority
 
-
-## Completion Criteria
-
-The task is complete when:
-
-- A new AI system can recover project context only from repository files.
-- AI can analyze requirements before making decisions.
-- AI can recommend architecture based on documented reasoning.
-- AI can evaluate technology choices.
-- AI can identify security requirements.
-- AI can guide project execution step by step.
-- Important decisions remain stored in repository memory.
-
-
-## Execution Rules
-
-- Complete one step at a time.
-- Explain purpose before operational actions.
-- Explain commands before execution.
-- Wait for human confirmation after operational steps.
-- Never assume missing information.
-- Update repository documentation after major decisions.
-
-
-## Human Executor Status
-
-The human executor:
-
-- Executes terminal commands.
-- Provides requested information.
-- Reviews AI recommendations.
-- Approves operational changes.
-
-
-## Continuity Requirement
-
-Every next AI session must be able to understand:
-
-- Current system state.
-- Active development task.
-- Previous decisions.
-- Required next actions.
-
-Only repository information is considered permanent memory.
+High - This is the critical path to version 1.0
