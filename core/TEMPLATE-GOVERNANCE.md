@@ -49,7 +49,7 @@ These files allow AI systems to understand project state.
 Examples:
 
 - PROJECT.yaml
-- CURRENT_STATE.md
+- CURRENT-SYSTEM-STATE.md
 - DECISIONS.md
 - NEXT_TASK.md
 - ROADMAP.md

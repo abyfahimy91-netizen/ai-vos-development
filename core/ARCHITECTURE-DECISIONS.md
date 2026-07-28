@@ -64,7 +64,7 @@ Responsibilities:
 Main files:
 
 - AI-VOS-MANIFEST.yaml
-- CURRENT_STATE.md
+- CURRENT-SYSTEM-STATE.md
 - DECISIONS.md
 - PROJECT.yaml
 - ROADMAP.md
@@ -527,7 +527,7 @@ AI-VOS requires a single official source for understanding the current developme
 
 During repository evolution, two state documents were created:
 
-- core/CURRENT_STATE.md
+- core/CURRENT-SYSTEM-STATE.md
 - core/CURRENT-SYSTEM-STATE.md
 
 The existence of multiple active-looking state files can create ambiguity for new AI systems during continuity recovery.
@@ -556,7 +556,7 @@ Characteristics:
 ### Legacy document
 
 ```
-core/CURRENT_STATE.md
+core/CURRENT-SYSTEM-STATE.md
 ```
 
 Characteristics:
@@ -581,7 +581,7 @@ as the only official active system state document.
 The file:
 
 ```
-core/CURRENT_STATE.md
+core/CURRENT-SYSTEM-STATE.md
 ```
 
 will remain as an archived historical document.
@@ -600,7 +600,7 @@ core/CURRENT-SYSTEM-STATE.md
 instead of:
 
 ```
-core/CURRENT_STATE.md
+core/CURRENT-SYSTEM-STATE.md
 ```
 
 

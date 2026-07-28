@@ -180,7 +180,7 @@ Documents required for analysis.
 Examples:
 
 - PROJECT-MANIFEST.yaml
-- CURRENT_STATE.md
+- CURRENT-SYSTEM-STATE.md
 - DECISIONS.md
 - ROADMAP.md
 

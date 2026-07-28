@@ -194,7 +194,7 @@ The Manifest should reference project memory files.
 
 Examples:
 
-- CURRENT_STATE.md
+- CURRENT-SYSTEM-STATE.md
 - DECISIONS.md
 - NEXT_TASK.md
 - ROADMAP.md

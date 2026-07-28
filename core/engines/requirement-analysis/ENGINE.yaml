@@ -66,7 +66,7 @@ repository:
 
     - PROJECT-MANIFEST.yaml
     - PROJECT.yaml
-    - CURRENT_STATE.md
+    - CURRENT-SYSTEM-STATE.md
     - DECISIONS.md
 
   updates:
