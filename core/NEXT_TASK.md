@@ -6,43 +6,44 @@ Date: 2026-07-28
 
 # Active Task
 
-Create Unified Engine Workflow
+Validate Engine Workflow with Real Project Scenario
 
 ---
 
 # Description
 
-All 8 engines are now defined. The next step is to create a unified
-workflow document that defines how engines interact, what order they
-operate in, and how information flows between them.
+All 8 engines and the unified workflow are defined. The next step
+is to validate the system by running through a simple project
+scenario to verify that the workflow functions correctly.
 
 ---
 
 # Acceptance Criteria
 
-- Workflow document created in core/
-- Engine interaction sequence defined
-- Information flow between engines documented
-- Trigger conditions for each engine specified
-- Human approval points identified
-- Workflow validated against a simple scenario
+- A simple test project scenario defined
+- Workflow phases executed in order
+- Information flow between engines verified
+- Human approval points tested
+- Session recovery tested
+- Issues documented and workflow adjusted
 
 ---
 
 # Deliverable
 
-File: core/ENGINE-WORKFLOW.md
+- workspace/validation/scenario-01/
+- Updated ENGINE-WORKFLOW.md if issues found
 
 ---
 
 # Dependencies
 
-- All 8 engine specifications must be read
-- Architecture decisions must be respected
-- Human approval required before commit
+- ENGINE-WORKFLOW.md must be read
+- All engine specifications must be available
+- Human must participate as operator
 
 ---
 
 # Priority
 
-High - This is the critical path to version 1.0
+High - Required before version 1.0
