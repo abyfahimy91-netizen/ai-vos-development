@@ -1,0 +1,61 @@
+name: Security Analysis Engine
+version: 0.1.0
+status: active
+description: >
+  Analyzes security aspects of project architecture and implementation.
+  Identifies threats, evaluates risks, and recommends security measures
+  throughout the development lifecycle.
+
+responsibilities:
+  - Identify security requirements from project context
+  - Analyze architecture for security vulnerabilities
+  - Evaluate technology stack for known risks
+  - Recommend security measures and best practices
+  - Review authentication and authorization design
+  - Assess data protection requirements
+  - Flag security risks in decisions
+
+inputs:
+  - Project requirements from Requirement Analysis Engine
+  - Architecture decisions from Architecture Decision Engine
+  - Technology stack from Technology Selection Engine
+  - Data flow descriptions
+  - Compliance requirements from human operator
+
+outputs:
+  - Security Requirements Document
+  - Threat Model
+  - Risk Assessment Report
+  - Security Recommendations
+  - Security Checklist
+
+dependencies:
+  - Requirement Analysis Engine
+  - Architecture Decision Engine
+  - Technology Selection Engine
+
+triggers:
+  - New project initialization
+  - Architecture decision with security implications
+  - Technology selection with known vulnerabilities
+  - Human requests security review
+  - Data handling changes
+
+constraints:
+  - Must not assume security by default
+  - Must flag all potential risks honestly
+  - Must recommend defense in depth
+  - Must consider both external and internal threats
+  - Must respect privacy requirements
+
+security_categories:
+  - Authentication
+  - Authorization
+  - Data encryption
+  - Input validation
+  - Session management
+  - API security
+  - Dependency vulnerabilities
+  - Infrastructure security
+  - Logging and monitoring
+  - Incident response
