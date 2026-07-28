@@ -1,0 +1,56 @@
+name: Architecture Decision Engine
+version: 0.1.0
+status: active
+description: >
+  Manages architectural decisions throughout the project lifecycle.
+  Records decisions, prevents contradictions, provides context
+  for future decisions, and ensures architectural consistency.
+
+responsibilities:
+  - Record new architecture decisions as ADRs
+  - Retrieve and present existing decisions
+  - Detect contradictions between proposed and existing decisions
+  - Recommend decisions based on project context
+  - Document rationale and alternatives for each decision
+  - Track decision status (proposed, approved, deprecated)
+
+inputs:
+  - ARCHITECTURE-DECISIONS.md
+  - Project requirements from Requirement Analysis Engine
+  - Technical constraints
+  - Context Recovery Report from Continuity Engine
+
+outputs:
+  - Architecture Decision Record (ADR)
+  - Contradiction Report
+  - Decision Recommendation
+  - Updated ARCHITECTURE-DECISIONS.md
+  - Decision Impact Analysis
+
+dependencies:
+  - Requirement Analysis Engine
+  - Continuity Engine
+
+triggers:
+  - New architectural choice needed
+  - Technology selection required
+  - Contradiction detected
+  - Human requests decision review
+
+constraints:
+  - Must not override approved decisions without human approval
+  - Must always document alternatives considered
+  - Must explain rationale in simple language
+  - Must flag irreversible decisions clearly
+
+adr_format:
+  id: "ADR-XXX"
+  title: "Decision title"
+  status: "proposed | approved | deprecated"
+  date: "YYYY-MM-DD"
+  context: "Why this decision is needed"
+  decision: "What was decided"
+  alternatives: "What else was considered"
+  rationale: "Why this option was chosen"
+  consequences: "What follows from this decision"
+  reversibility: "reversible | partially-reversible | irreversible"
