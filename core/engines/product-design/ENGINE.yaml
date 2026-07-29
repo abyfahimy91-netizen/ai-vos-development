@@ -1,0 +1,115 @@
+# AI-VOS Product Design Engine
+
+engine:
+
+  name: Product Design Engine
+
+  version: "1.0"
+
+  status: active
+
+  purpose: >
+    Define the product based on validated business opportunity and
+    revenue model. Specify MVP scope, features, user experience,
+    and technical requirements that align with business goals.
+
+responsibility:
+
+  primary:
+    - Define product vision and value proposition.
+    - Specify MVP feature set aligned with revenue model.
+    - Create user personas and user journeys.
+    - Define user stories and acceptance criteria.
+    - Specify user experience requirements.
+    - Prioritize features using MoSCoW method.
+    - Define technical constraints and requirements.
+    - Create product roadmap.
+
+  not_responsible_for:
+    - Market validation (Business Analysis Engine).
+    - Revenue model design (Revenue Model Engine).
+    - Marketing strategy (Go-To-Market Engine).
+    - Software architecture (Architecture Decision Engine).
+    - Final product decisions (human approval required).
+
+inputs:
+
+  required:
+    - Business Opportunity Report (from Business Analysis Engine).
+    - Revenue Model Document (from Revenue Model Engine).
+    - Human operator product vision and preferences.
+
+  optional:
+    - Existing product documentation.
+    - User feedback or research.
+    - Design preferences and brand guidelines.
+    - Technical constraints.
+
+outputs:
+
+  produces:
+    - Product Definition Document.
+    - MVP Feature Specification.
+    - User Personas and Journeys.
+    - User Stories with Acceptance Criteria.
+    - Product Roadmap.
+    - Technical Requirements Summary.
+
+dependencies:
+
+  required_engines:
+    - Business Analysis Engine (must complete first).
+    - Revenue Model Engine (must complete first).
+
+  feeds_into:
+    - Go-To-Market Engine.
+    - Requirement Analysis Engine.
+    - Architecture Decision Engine.
+    - Technology Selection Engine.
+
+repository:
+
+  reads:
+    - business/BUSINESS-OPPORTUNITY.md
+    - business/MARKET-VALIDATION.md
+    - business/BUSINESS-MODEL.md
+    - PROJECT-MANIFEST.yaml
+    - ARCHITECTURE-DECISIONS.md
+
+  updates:
+    - requirements/REQUIREMENTS.md
+    - requirements/USER-STORIES.md
+
+human_interaction:
+
+  approval_required:
+    - Before finalizing MVP scope.
+    - Before feature prioritization.
+    - Before passing to technical engines.
+
+  questions_to_ask:
+    - What is the most important feature for customers?
+    - What is the desired look and feel?
+    - Are there must-have features for launch?
+    - What platforms should the product support?
+    - What is the target launch timeline?
+
+rules:
+  - Repository is the source of truth.
+  - MVP must be minimal but sufficient to generate revenue.
+  - Features must align with pricing tiers in revenue model.
+  - User stories must be testable and measurable.
+  - Human operator approves final product scope.
+
+lifecycle:
+
+  stages:
+    - Input collection from business engines.
+    - Product vision definition.
+    - User persona creation.
+    - Feature identification and prioritization.
+    - MVP scope definition.
+    - User story creation.
+    - Product roadmap creation.
+    - Human review and approval.
+    - Handoff to technical engines.

@@ -1,0 +1,117 @@
+# AI-VOS Go-To-Market Engine
+
+engine:
+
+  name: Go-To-Market Engine
+
+  version: "1.0"
+
+  status: active
+
+  purpose: >
+    Design the complete go-to-market strategy including marketing,
+    launch planning, customer acquisition, and growth strategy
+    to ensure the product reaches customers and generates revenue.
+
+responsibility:
+
+  primary:
+    - Design marketing strategy and channels.
+    - Create launch plan with timeline.
+    - Define customer acquisition strategy.
+    - Design sales funnel and conversion path.
+    - Create content marketing plan.
+    - Define key metrics and KPIs.
+    - Design growth and retention strategy.
+    - Recommend marketing tools and platforms.
+
+  not_responsible_for:
+    - Market validation (Business Analysis Engine).
+    - Revenue model design (Revenue Model Engine).
+    - Product feature design (Product Design Engine).
+    - Technical implementation.
+    - Actual marketing execution (human operator executes).
+
+inputs:
+
+  required:
+    - Business Opportunity Report (from Business Analysis Engine).
+    - Revenue Model Document (from Revenue Model Engine).
+    - Product Definition (from Product Design Engine).
+    - Human operator marketing preferences and budget.
+
+  optional:
+    - Existing marketing materials.
+    - Social media accounts and following.
+    - Email list or existing audience.
+    - Partnership opportunities.
+
+outputs:
+
+  produces:
+    - Go-To-Market Strategy Document.
+    - Marketing Channel Plan.
+    - Launch Timeline and Checklist.
+    - Customer Acquisition Funnel.
+    - Content Marketing Plan.
+    - KPI Dashboard Definition.
+    - Growth Strategy Document.
+
+dependencies:
+
+  required_engines:
+    - Business Analysis Engine (must complete first).
+    - Revenue Model Engine (must complete first).
+    - Product Design Engine (must complete first).
+
+  feeds_into:
+    - Deployment planning.
+    - Operations and growth.
+
+repository:
+
+  reads:
+    - business/BUSINESS-OPPORTUNITY.md
+    - business/MARKET-VALIDATION.md
+    - business/BUSINESS-MODEL.md
+    - requirements/REQUIREMENTS.md
+    - PROJECT-MANIFEST.yaml
+
+  updates:
+    - business/GO-TO-MARKET.md
+    - deployment/DEPLOYMENT.md
+
+human_interaction:
+
+  approval_required:
+    - Before finalizing marketing strategy.
+    - Before launch plan.
+    - Before budget allocation.
+
+  questions_to_ask:
+    - What is your marketing budget?
+    - Which social media platforms do you use?
+    - Do you have an existing audience or email list?
+    - What is your target launch date?
+    - Are there partnership opportunities?
+
+rules:
+  - Repository is the source of truth.
+  - Marketing strategy must align with revenue model and pricing.
+  - Launch plan must be realistic for a non-technical operator.
+  - All marketing claims must be truthful and verifiable.
+  - Human operator approves all public-facing content.
+  - Focus on low-cost high-impact channels first.
+
+lifecycle:
+
+  stages:
+    - Input collection from business and product engines.
+    - Marketing channel analysis.
+    - Customer acquisition funnel design.
+    - Content strategy creation.
+    - Launch plan and timeline.
+    - KPI definition.
+    - Growth strategy design.
+    - Human review and approval.
+    - Handoff to deployment and operations.

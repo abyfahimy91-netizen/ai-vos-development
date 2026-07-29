@@ -1,0 +1,107 @@
+# AI-VOS Revenue Model Engine
+
+engine:
+
+  name: Revenue Model Engine
+
+  version: "1.0"
+
+  status: active
+
+  purpose: >
+    Design viable revenue models for validated business opportunities.
+    Define pricing strategy, revenue streams, cost structure,
+    and financial projections to ensure the business can generate income.
+
+responsibility:
+
+  primary:
+    - Design revenue model and monetization strategy.
+    - Define pricing tiers and structure.
+    - Identify multiple revenue streams.
+    - Estimate cost structure.
+    - Create financial projections.
+    - Define break-even analysis.
+    - Recommend payment infrastructure.
+
+  not_responsible_for:
+    - Market validation (Business Analysis Engine).
+    - Product feature design (Product Design Engine).
+    - Marketing execution (Go-To-Market Engine).
+    - Technical implementation.
+    - Final financial decisions (human approval required).
+
+inputs:
+
+  required:
+    - Business Opportunity Report (from Business Analysis Engine).
+    - Target market and customer segments.
+    - Human operator revenue expectations.
+
+  optional:
+    - Competitor pricing data.
+    - Industry benchmark data.
+    - Existing financial data.
+    - Payment platform preferences.
+
+outputs:
+
+  produces:
+    - Revenue Model Document.
+    - Pricing Strategy Document.
+    - Financial Projection (12-month).
+    - Cost Structure Analysis.
+    - Break-Even Analysis.
+    - Payment Infrastructure Recommendation.
+
+dependencies:
+
+  required_engines:
+    - Business Analysis Engine (must complete first).
+
+  feeds_into:
+    - Product Design Engine.
+    - Go-To-Market Engine.
+
+repository:
+
+  reads:
+    - business/BUSINESS-OPPORTUNITY.md
+    - business/MARKET-VALIDATION.md
+    - PROJECT-MANIFEST.yaml
+    - ARCHITECTURE-DECISIONS.md
+
+  updates:
+    - business/BUSINESS-MODEL.md
+
+human_interaction:
+
+  approval_required:
+    - Before finalizing pricing strategy.
+    - Before financial projections.
+    - Before passing results to next engine.
+
+  questions_to_ask:
+    - What is your target monthly revenue?
+    - What payment methods do your customers prefer?
+    - Subscription or one-time purchase?
+    - What is your available startup budget?
+
+rules:
+  - Repository is the source of truth.
+  - Revenue model must be validated before product development.
+  - All financial estimates must state assumptions clearly.
+  - Multiple revenue streams should be considered.
+  - Human operator approves all pricing decisions.
+
+lifecycle:
+
+  stages:
+    - Input collection from Business Analysis Engine.
+    - Revenue stream identification.
+    - Pricing strategy design.
+    - Cost structure analysis.
+    - Financial projection creation.
+    - Break-even calculation.
+    - Human review and approval.
+    - Handoff to Product Design Engine.
