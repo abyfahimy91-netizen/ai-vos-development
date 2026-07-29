@@ -1,6 +1,6 @@
 # AI-VOS User and Operator Guide
 
-Version: 1.1.0
+Version: 1.1.1
 Date: 2026-07-29
 
 ---

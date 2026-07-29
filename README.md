@@ -1,6 +1,6 @@
 # AI-VOS - AI Virtual Operating System
 
-Version: 1.1.0
+Version: 1.1.1
 Status: Active
 
 ---

@@ -1,6 +1,6 @@
 # AI-VOS Development Roadmap
 
-Version: 1.1.0
+Version: 1.1.1
 Date: 2026-07-29
 
 ---
@@ -30,7 +30,7 @@ raw ideas into revenue-generating businesses.
 - Engine workflow validated via Scenario 01.
 - Core freeze and improvement protocol.
 
-## v1.1.0 - Business Engine Integration (Completed)
+## v1.1.1 - Business Engine Integration (Completed)
 
 - 4 Business Engines added (total: 12).
 - Boot sequence unified.

@@ -1,6 +1,6 @@
 # AI-VOS Immutable Principles
 
-Version: 1.1.0
+Version: 1.1.1
 
 These principles are permanent and apply to all AI systems and all projects.
 They must not be modified without explicit human approval and version upgrade.
