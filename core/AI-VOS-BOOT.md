@@ -32,13 +32,15 @@ When starting a new session, AI must read these files in order:
 
 3. core/ARCHITECTURE-DECISIONS.md
 
-4. core/ENGINE-SPECIFICATION.md
+4. core/DECISIONS.md
 
-5. Available Engine documentation inside:
+5. core/ENGINE-SPECIFICATION.md
+
+6. Available Engine documentation inside:
 
 core/engines/
 
-6. Available templates inside:
+7. Available templates inside:
 
 workspace/templates/
 
