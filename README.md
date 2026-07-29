@@ -1,21 +1,86 @@
-# AI-VOS Development
+# AI-VOS - AI Virtual Operating System
 
-Welcome to the AI Virtual Operating System (AI-VOS).
+Version: 1.1.0
+Status: Active
 
-This repository contains the development of the AI-VOS framework.
+---
+
+## Mission
+
+Transform raw ideas into revenue-generating businesses
+through structured AI-human collaboration.
+
+A non-programmer human operator works with AI to build
+complete business products from scratch or complete
+unfinished projects.
+
+---
+
+## Quick Start
+
+New here? Read START-HERE.md first.
+
+For AI systems: Start from boot/SYSTEM.yaml.
+
+---
+
+## Architecture
+
+AI-VOS uses an Engine-based architecture with 12 engines:
+
+### Business Engines (Pipeline)
+
+1. Business Analysis - Validate ideas and markets
+2. Revenue Model - Design monetization
+3. Product Design - Define product and MVP
+4. Go-To-Market - Marketing and launch
+
+### Technical Engines
+
+5. Requirement Analysis
+6. Continuity
+7. Architecture Decision
+8. Technology Selection
+9. Security Analysis
+10. Documentation
+11. Development Planning
+12. Testing and Quality
+
+---
+
+## Repository Structure
+
+| Path | Purpose |
+|------|--------|
+| boot/ | AI boot sequence (start here) |
+| core/ | Principles, decisions, engine specs |
+| core/engines/ | 12 engine definitions |
+| templates/ | Reusable project templates |
+| workspace/ | Project working area |
+| docs/ | User guides |
+
+---
 
 ## For AI Systems
 
-If you are an AI assistant, do NOT start by reading every file.
-
-Your mandatory workflow is:
-
 1. Start from boot/SYSTEM.yaml.
-2. Follow the official boot sequence defined by the repository.
-3. Read only the files required by the boot process.
-4. Follow only the requested task.
-5. Never assume missing information.
-6. Always wait for human confirmation before moving to the next operational step.
+2. Follow the boot sequence in order.
+3. Read only required files.
+4. Never assume missing information.
+5. Wait for human confirmation before changes.
 
-This repository is designed to allow any AI model to continue the project from any point without relying on previous chat history.
+---
+
+## Key Files
+
+| File | Purpose |
+|------|--------|
+| START-HERE.md | Guide for non-technical users |
+| boot/SYSTEM.yaml | AI boot entry point |
+| core/PRINCIPLES.md | Immutable system principles |
+| core/ENGINE-SPECIFICATION.md | Engine registry and contract |
+| core/PROJECT-LIFECYCLE.md | Phase-to-engine mapping |
+| core/ARCHITECTURE-DECISIONS.md | Permanent decisions |
+| core/CURRENT-SYSTEM-STATE.md | Current version and status |
+| core/NEXT_TASK.md | Active development task |
 
