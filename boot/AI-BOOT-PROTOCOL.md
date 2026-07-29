@@ -1,173 +1,63 @@
 # AI-VOS Boot Protocol
 
+Version: 1.1.0
+
 ## Purpose
 
-This document defines the mandatory startup procedure for any AI system entering an AI-VOS repository.
-
-The repository is the source of truth.
-
-Chat history is not considered permanent memory.
+This file defines the complete startup behavior for AI systems entering AI-VOS.
 
 ---
 
-# AI Startup Sequence
+## Boot Sequence
 
-## Step 1 - Repository Understanding
+The authoritative boot sequence is defined in `boot/SYSTEM.yaml`.
 
-The AI must first identify:
+Steps:
+1. Read `boot/AI-ENTRY.md` — Load behavioral rules.
+2. Read `core/PRINCIPLES.md` — Load immutable principles.
+3. Read `core/CURRENT-SYSTEM-STATE.md` — Understand current status.
+4. Read `core/ARCHITECTURE-DECISIONS.md` — Load permanent decisions.
+5. Read `core/ENGINE-SPECIFICATION.md` — Understand engine architecture.
+6. Read `core/NEXT_TASK.md` — Identify active task.
 
-- Project identity.
-- Current system version.
-- Repository structure.
-- Available documentation.
-
-The AI must not modify files at this stage.
-
----
-
-## Step 2 - Mandatory Reading Order
-
-The AI must read documents in this order:
-
-1. boot/AI-ENTRY.md
-
-Purpose:
-Understand operating rules.
-
-2. core/CURRENT-SYSTEM-STATE.md
-
-Purpose:
-Understand current project condition.
-
-3. NEXT_TASK.md
-
-Purpose:
-Identify the current mission.
-
-4. DECISIONS.md
-
-Purpose:
-Understand previous decisions.
-
-5. PROJECT.yaml
-
-Purpose:
-Understand project definition.
-
-6. PROJECT-LIFECYCLE.md
-
-Purpose:
-Understand project development phase.
-
-7. AI-ORGANIZATION.md
-
-Purpose:
-Understand available roles and responsibilities.
+After step 6, boot is complete. Begin work on the active task.
 
 ---
 
-# Step 3 - State Analysis
+## Post-Boot Behavior
 
-After reading required files, AI must determine:
-
-- Current project phase.
-- Completed tasks.
-- Pending tasks.
-- Missing information.
-- Required human inputs.
-
-AI must not guess missing information.
+After boot completion:
+1. Read only files required by the current task.
+2. Do not read the entire repository.
+3. Follow the Engine Workflow defined in `core/ENGINE-WORKFLOW.md`.
+4. For project work, follow `core/PROJECT-LIFECYCLE.md`.
+5. For engine details, read specific engine files in `core/engines/`.
 
 ---
 
-# Step 4 - Information Request
+## Task Execution Rules
 
-If information is missing, AI must:
-
-- Clearly explain what information is required.
-- Explain why it is needed.
-- Wait for human response.
-
----
-
-# Step 5 - Planning
-
-Before any operational action:
-
-AI must provide:
-
-- Objective.
-- Proposed steps.
-- Expected result.
-- Required human actions.
+- Follow `core/TASK-MANAGEMENT.md` for task workflow.
+- Update `core/NEXT_TASK.md` after task completion.
+- Update `core/CURRENT-SYSTEM-STATE.md` after major changes.
+- Record decisions in `core/ARCHITECTURE-DECISIONS.md`.
 
 ---
 
-# Step 6 - Human Executor Workflow
+## Error Handling
 
-The human executor performs:
-
-- Terminal commands.
-- Server actions.
-- External account operations.
-- Permission changes.
-
-For every command AI provides:
-
-AI must explain:
-
-1. What the command does.
-2. Expected output.
-3. Possible risks.
-
-After providing commands:
-
-AI must wait for execution results.
+If a boot file is missing or unreadable:
+1. Stop the boot sequence.
+2. Report the missing file to the human operator.
+3. Do not guess or assume file contents.
+4. Wait for human resolution.
 
 ---
 
-# Step 7 - Approval Rules
+## Session Continuity
 
-AI must not:
-
-- Make irreversible changes without confirmation.
-- Deploy without approval.
-- Delete data without confirmation.
-- Change architecture without recording decisions.
-
----
-
-# Step 8 - Documentation Update
-
-After major changes:
-
-AI must update:
-
-- core/CURRENT-SYSTEM-STATE.md
-- DECISIONS.md
-- NEXT_TASK.md
-
-The repository must always represent the real project condition.
-
----
-
-# Step 9 - Context Protection
-
-AI must:
-
-- Read only required files.
-- Avoid unnecessary explanations.
-- Store permanent knowledge in repository files.
-- Never depend only on conversation history.
-
----
-
-# Final Principle
-
-AI-VOS allows any compatible AI system to continue project development from repository information.
-
-The repository is the memory.
-
-The human executor is the operational bridge.
-
-The AI is the planning and intelligence layer.
+At the start of every new session:
+1. Re-execute the full boot sequence.
+2. Verify `core/CURRENT-SYSTEM-STATE.md` matches expected state.
+3. Read `core/NEXT_TASK.md` for the current objective.
+4. Resume work from the last recorded state.

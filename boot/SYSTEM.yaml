@@ -1,84 +1,71 @@
 system:
   name: AI-VOS
   full_name: AI Virtual Operating System
-  version: "1.0.1"
+  version: "1.1.0"
   status: active
+  description: >
+    AI-VOS is an AI operating system that transforms raw ideas into
+    revenue-generating businesses through structured AI-human collaboration.
+    A non-programmer human operator works with AI to build complete
+    business products from scratch or complete unfinished projects.
 
 entry_point:
+  file: boot/SYSTEM.yaml
   description: >
-    This file is the official bootstrap entry point for every AI system.
-    Every compatible AI must start here before reading any other project file.
+    Single official bootstrap entry point.
+    Every AI system must start here before reading any other file.
 
 boot_sequence:
-
-  - step: 0
-    file: boot/SYSTEM.yaml
-    purpose: Verify system identity and initialize boot process.
-
   - step: 1
     file: boot/AI-ENTRY.md
-    purpose: Load AI operating principles.
+    purpose: Load AI behavioral rules and operating principles.
 
   - step: 2
-    file: boot/AI-BOOT-PROTOCOL.md
-    purpose: Load startup behavior and execution protocol.
+    file: core/PRINCIPLES.md
+    purpose: Load immutable system principles (single source of truth).
 
   - step: 3
-    file: core/AI-VOS-MANIFEST.yaml
-    purpose: Load system architecture and capabilities.
+    file: core/CURRENT-SYSTEM-STATE.md
+    purpose: Understand current version, status, and completed components.
 
   - step: 4
-    file: core/CURRENT-SYSTEM-STATE.md
-    purpose: Load the current repository state.
+    file: core/ARCHITECTURE-DECISIONS.md
+    purpose: Load permanent architectural and strategic decisions.
 
   - step: 5
-    file: core/DECISIONS.md
-    purpose: Load permanent architectural and project decisions.
+    file: core/ENGINE-SPECIFICATION.md
+    purpose: Understand Engine-based architecture and available engines.
 
   - step: 6
-    file: core/PROJECT.yaml
-    purpose: Load project definition and metadata.
-
-  - step: 7
-    file: core/ROADMAP.md
-    purpose: Load long-term development roadmap.
-
-  - step: 8
     file: core/NEXT_TASK.md
-    purpose: Identify the current objective.
-
-  - step: 9
-    file: core/TASK-MANAGEMENT.md
-    purpose: Load task execution workflow and completion rules.
+    purpose: Identify the current active task and begin work.
 
 startup_rules:
-
-  - Never assume missing information.
+  - Execute boot sequence in exact order. Do not skip steps.
   - Repository is the single source of truth.
-  - Chat history is temporary context only.
-  - Read only the files required by the boot sequence.
-  - Execute the boot sequence in order.
-  - Ask for human confirmation before operational changes.
-  - Record important decisions in repository files.
-  - Update documentation after major architectural changes.
+  - Chat history is temporary. Never rely on it for decisions.
+  - Never assume missing information. Ask questions instead.
+  - Request human confirmation before any operational change.
+  - After boot, read only files required by the current task.
 
 boot_completion:
-
   description: >
-    After successfully completing the boot sequence,
-    the AI is authorized to begin the task defined
-    in core/NEXT_TASK.md while following core/TASK-MANAGEMENT.md.
+    After completing all 6 steps, the AI is authorized to begin
+    the task defined in core/NEXT_TASK.md following the rules
+    in core/PRINCIPLES.md.
 
 roles:
-
   ai:
-    responsibility: Planning, reasoning, documentation and guidance.
-
+    responsibility: >
+      Analysis, planning, reasoning, documentation, architecture,
+      technology evaluation, code generation guidance, business
+      strategy, and continuous improvement suggestions.
   human:
-    responsibility: Execute commands, validate results and approve operational actions.
+    responsibility: >
+      Execute terminal commands, validate results, approve
+      operational actions, provide domain knowledge and business context.
 
 final_principle:
-
   repository_is_memory: true
   repository_is_authoritative: true
   boot_starts_here: boot/SYSTEM.yaml

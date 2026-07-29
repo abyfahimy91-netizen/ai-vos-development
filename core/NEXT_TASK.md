@@ -1,40 +1,45 @@
 # AI-VOS Next Task
 
-Date: 2026-07-28
+Date: 2026-07-29
 
 ---
 
 # Active Task
 
-AI-VOS v0.2 Project Template System Design
+Build 4 Business Engines for AI-VOS v1.1.0
+
+---
+
+# Context
+
+AI-VOS mission is to transform raw ideas into revenue-generating businesses.
+Technical engines (8) are complete. Business engines (4) are missing.
+Without business engines, AI-VOS cannot fulfill its core mission.
+
+---
+
+# Business Engines to Build
+
+1. business-analysis — Market research, opportunity identification, competitor analysis.
+2. revenue-model — Revenue model design, pricing strategy, financial projections.
+3. product-design — Product definition, MVP scope, user experience design.
+4. go-to-market — Marketing strategy, launch plan, customer acquisition.
 
 ---
 
 # Completed
 
-- Engine architecture defined.
-- Human approval model defined.
-- Project lifecycle defined.
-- System-project separation defined.
-- AI-VOS immutability protocol defined.
-- Project repository initialization model defined.
-- Project Initialization Engine created.
-
----
-
-# Next Development Activities
-
-1. Design reusable project templates.
-2. Standardize project initialization packages.
-3. Validate templates with multiple project scenarios.
-4. Prepare foundation for execution runtime.
+- Boot sequence unified (v1.1.0).
+- Duplicate files removed.
+- PRINCIPLES.md created.
+- CURRENT-SYSTEM-STATE.md updated.
+- NEXT_TASK.md updated.
 
 ---
 
 # Acceptance Criteria
 
-- AI-VOS repository remains stable.
-- Projects have independent repositories.
-- Any AI system can recover project context.
-- Project initialization is standardized.
-- Improvement proposals remain separate from system core.
+- Each engine has: ENGINE.yaml, README.md, INPUTS.md, OUTPUTS.md.
+- ENGINE-SPECIFICATION.md lists all 12 engines.
+- PROJECT-LIFECYCLE.md maps phases to engines.
+- All changes committed and pushed.
