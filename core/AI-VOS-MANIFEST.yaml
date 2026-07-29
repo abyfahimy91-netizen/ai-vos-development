@@ -1,88 +1,77 @@
 name: AI-VOS
 full_name: AI Virtual Operating System
-version: "1.0.1"
-status: stable
+version: "1.1.0"
+status: active
 
-purpose: "Reusable AI operating system framework for managing and developing projects."
+purpose: >
+  AI operating system that transforms raw ideas into
+  revenue-generating businesses through structured
+  AI-human collaboration. Non-programmer operators
+  work with AI to build complete business products.
 
 principles:
+  source: core/PRINCIPLES.md
   repository_is_source_of_truth: true
   chat_history_is_permanent_memory: false
   human_executor_required: true
-  step_by_step_execution: true
   confirmation_required_before_operations: true
+  business_first_technology_second: true
+
+boot:
+  entry_point: boot/SYSTEM.yaml
+  sequence:
+    - boot/AI-ENTRY.md
+    - core/PRINCIPLES.md
+    - core/CURRENT-SYSTEM-STATE.md
+    - core/ARCHITECTURE-DECISIONS.md
+    - core/ENGINE-SPECIFICATION.md
+    - core/NEXT_TASK.md
+
+engines:
+  total: 12
+  business:
+    - business-analysis
+    - revenue-model
+    - product-design
+    - go-to-market
+  technical:
+    - requirement-analysis
+    - continuity
+    - architecture-decision
+    - technology-selection
+    - security-analysis
+    - documentation
+    - development-planning
+    - testing-quality
+  initialization:
+    - project-initialization
 
 layers:
-  startup:
+  boot:
+    path: boot/
     status: active
-    files:
-      - AI-ENTRY.md
-      - AI-BOOT-PROTOCOL.md
-
-  memory:
+  core:
+    path: core/
     status: active
-    files:
-      - CURRENT-SYSTEM-STATE.md
-      - DECISIONS.md
-
-  project_control:
+  workspace:
+    path: workspace/
     status: active
-    files:
-      - PROJECT.yaml
-      - PROJECT-LIFECYCLE.md
-      - TASK-MANAGEMENT.md
-
-  organization:
-    status: active
-    files:
-      - AI-ORGANIZATION.md
-
   templates:
-    status: planned
     path: templates/
-
-  runtime:
-    status: planned
-    path: runtime/
-
-development:
-  phase: operational
-
-  completed:
-    - repository_initialization
-    - ai_boot_protocol
-    - decision_memory
-    - project_lifecycle
-    - ai_organization
-    - task_management
-  - engine_architecture
-  - validation_model
-  - operational_readiness
-  - core_freeze_protocol
-
-  next:
-    - project_templates
-    - execution_runtime
-    - automation_workflows
-
-repository:
-  name: ai-vos-development
-  branch: main
-  source_control: git
-
-rules:
-  - "AI must not assume missing information."
-  - "AI must work step by step."
-  - "Human confirmation is required before operational changes."
-  - "Permanent decisions must be stored in repository files."
+    status: active
 
 roles:
   ai:
-    responsibility: planning_and_intelligence
-
+    responsibility: >
+      Analysis, planning, documentation, architecture,
+      business strategy, code generation guidance.
   human:
-    responsibility: operational_execution
+    responsibility: >
+      Execute commands, validate results,
+      approve changes, provide domain knowledge.
 
 continuity:
-  objective: "Allow any compatible AI system to continue development from repository information."
+  objective: >
+    Any compatible AI system can continue work
+    from repository information only.
   memory: repository
