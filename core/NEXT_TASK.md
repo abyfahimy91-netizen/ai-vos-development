@@ -6,40 +6,39 @@ Date: 2026-07-29
 
 # Active Task
 
-Build 4 Business Engines for AI-VOS v1.1.0
+AI-VOS v1.2.0 - Template Enhancement and Real Project Validation
 
 ---
 
-# Context
+# Completed (v1.1.0)
 
-AI-VOS mission is to transform raw ideas into revenue-generating businesses.
-Technical engines (8) are complete. Business engines (4) are missing.
-Without business engines, AI-VOS cannot fulfill its core mission.
+- 4 Business Engines created (business-analysis, revenue-model, product-design, go-to-market).
+- Boot sequence unified in SYSTEM.yaml.
+- PRINCIPLES.md created (10 immutable principles).
+- Duplicate and legacy files removed.
+- ENGINE-SPECIFICATION.md updated (12 engines).
+- PROJECT-LIFECYCLE.md updated (phase-to-engine mapping).
+- AI-ORGANIZATION.md updated (role-to-engine mapping).
+- START-HERE.md and USER-GUIDE.md rewritten for non-technical users.
+- README.md, ROADMAP.md, MANIFEST, MISSION updated.
+- RELEASE-NOTES-v1.1.0.md published.
+- Tag v1.1.0 created.
 
 ---
 
-# Business Engines to Build
+# Next Development Activities (v1.2.0)
 
-1. business-analysis — Market research, opportunity identification, competitor analysis.
-2. revenue-model — Revenue model design, pricing strategy, financial projections.
-3. product-design — Product definition, MVP scope, user experience design.
-4. go-to-market — Marketing strategy, launch plan, customer acquisition.
-
----
-
-# Completed
-
-- Boot sequence unified (v1.1.0).
-- Duplicate files removed.
-- PRINCIPLES.md created.
-- CURRENT-SYSTEM-STATE.md updated.
-- NEXT_TASK.md updated.
+1. Update project templates to include business engine outputs.
+2. Add business document templates (BUSINESS-OPPORTUNITY, BUSINESS-MODEL, GO-TO-MARKET).
+3. Validate the full pipeline with a real project scenario.
+4. Improve project initialization workflow for business-first approach.
+5. Test multi-AI continuity with the new structure.
 
 ---
 
 # Acceptance Criteria
 
-- Each engine has: ENGINE.yaml, README.md, INPUTS.md, OUTPUTS.md.
-- ENGINE-SPECIFICATION.md lists all 12 engines.
-- PROJECT-LIFECYCLE.md maps phases to engines.
-- All changes committed and pushed.
+- Project templates include business document placeholders.
+- A real project passes through all 8 phases successfully.
+- A second AI can continue the project from repository only.
+- AI-VOS repository remains stable and unchanged during project work.
