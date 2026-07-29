@@ -1,0 +1,73 @@
+# AI-VOS Project Initialization Engine
+
+engine:
+
+  name: Project Initialization Engine
+
+  version: "1.0"
+
+  status: active
+
+  purpose: >
+    Initialize new project repositories using approved templates.
+    Ensure every project starts with a standard structure,
+    permanent memory files, and proper separation from AI-VOS.
+
+responsibility:
+
+  primary:
+    - Create new project repository structure.
+    - Apply approved project template.
+    - Initialize project memory files.
+    - Connect project to AI-VOS framework.
+    - Analyze existing projects for continuation.
+
+  not_responsible_for:
+    - Business analysis (Business Analysis Engine).
+    - Technical decisions (Technical Engines).
+    - Modifying AI-VOS core.
+
+inputs:
+
+  required:
+    - Project name and description.
+    - Selected project template.
+    - Human approval for repository creation.
+
+  optional:
+    - Existing project repository (for continuation).
+    - Business documents (if available).
+
+outputs:
+
+  produces:
+    - Initialized project repository.
+    - Project identity file.
+    - Project state file.
+    - Project decisions file.
+    - Next task file.
+
+dependencies:
+
+  required_engines:
+    - None (can run independently).
+
+  feeds_into:
+    - Business Analysis Engine (for new projects).
+    - Continuity Engine (for existing projects).
+
+rules:
+  - Repository is the source of truth.
+  - Project repositories must be separate from AI-VOS.
+  - Human approval required before repository creation.
+  - AI-VOS core must not be modified.
+
+lifecycle:
+
+  stages:
+    - Project request intake.
+    - Template selection.
+    - Repository creation.
+    - File initialization.
+    - Human verification.
+    - Handoff to next engine.
