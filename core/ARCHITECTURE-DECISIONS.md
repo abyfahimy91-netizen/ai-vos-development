@@ -874,3 +874,50 @@ This provides:
 
 Approved for AI-VOS version 1.0.0.
 
+
+---
+
+# Decision 013: Business Engine Integration (v1.1.0)
+
+Date: 2026-07-29
+
+Version: 1.1.0
+
+Subject: Add 4 business engines and unify boot sequence
+
+## Context
+
+AI-VOS mission is to transform raw ideas into revenue-generating businesses.
+Version 1.0.x had 8 technical engines but no business engines.
+The boot sequence had contradictions across multiple files.
+Duplicate and legacy files caused confusion.
+
+## Decision
+
+1. Add 4 Business Engines: Business Analysis, Revenue Model,
+   Product Design, Go-To-Market.
+2. Unify boot sequence into single authoritative order in SYSTEM.yaml.
+3. Centralize immutable principles in core/PRINCIPLES.md.
+4. Remove all duplicate and legacy files.
+5. Update ENGINE-SPECIFICATION.md with all 12 engines.
+6. Add phase-to-engine mapping in PROJECT-LIFECYCLE.md.
+7. Rewrite START-HERE.md and README.md for non-technical users.
+
+## Removed Files
+
+- core/CURRENT_STATE.md (replaced by CURRENT-SYSTEM-STATE.md)
+- core/DECISIONS.md (replaced by ARCHITECTURE-DECISIONS.md)
+- core/PROJECT-LIFECYCLE-ENGINE.md (replaced by PROJECT-LIFECYCLE.md)
+- core/AI-VOS-BOOT.md (replaced by boot/AI-BOOT-PROTOCOL.md)
+- core/AI-READING-PROTOCOL.md (replaced by boot/AI-ENTRY.md)
+
+## Impact
+
+- AI-VOS can now fulfill its full mission: idea to revenue.
+- Boot sequence is unambiguous.
+- Principles are centralized (no repetition).
+- Non-technical users have clear guidance.
+
+## Status
+
+Approved and implemented in AI-VOS version 1.1.0.

@@ -1,10 +1,31 @@
 # AI-VOS Organization Model
 
+Version: 1.1.0
+
 ## Purpose
 
-Define the virtual organization structure operated by AI systems with a human executor.
+Define the virtual organization structure operated by AI
+with a human executor. Each role maps to one or more engines.
 
-AI-VOS uses role-based AI agents. Each agent has defined responsibilities, inputs, outputs and collaboration rules.
+---
+
+# Role-to-Engine Mapping
+
+| AI Role | Engine | Phase |
+|---------|--------|-------|
+| CEO Agent | Coordinates all engines | All |
+| Strategy Agent | Business Analysis Engine | 0-1 |
+| Market Research Agent | Business Analysis Engine | 0-1 |
+| Finance Agent | Revenue Model Engine | 2 |
+| Product Manager Agent | Product Design Engine | 3 |
+| Software Architect Agent | Architecture Decision Engine | 4 |
+| Technology Agent | Technology Selection Engine | 4 |
+| Security Agent | Security Analysis Engine | 4 |
+| Developer Agent | Development Planning Engine | 5 |
+| QA Agent | Testing and Quality Engine | 5 |
+| Documentation Agent | Documentation Engine | All |
+| Marketing Agent | Go-To-Market Engine | 6-7 |
+| Continuity Agent | Continuity Engine | All |
 
 ---
 
@@ -13,48 +34,41 @@ AI-VOS uses role-based AI agents. Each agent has defined responsibilities, input
 ## CEO Agent
 
 Responsibility:
-- Coordinate all AI agents.
+- Coordinate all AI agents and engines.
 - Protect business objectives.
 - Resolve conflicts between departments.
-- Ensure decisions follow project goals.
-
-Inputs:
-- Business objectives.
-- Reports from all agents.
-
-Outputs:
-- Strategic decisions.
-- Priority changes.
+- Ensure pipeline order is followed.
 
 ---
 
-# Strategy Department
+# Business Department
 
 ## Strategy Agent
 
+Engine: Business Analysis Engine
+
 Responsibility:
-- Business strategy.
-- Market positioning.
+- Business strategy and market positioning.
+- Opportunity identification.
 - Long-term planning.
-
-Outputs:
-- Strategy documents.
-- Business recommendations.
-
----
-
-# Research Department
 
 ## Market Research Agent
 
+Engine: Business Analysis Engine
+
 Responsibility:
-- Analyze market.
+- Analyze market size and trends.
 - Study competitors.
 - Identify customer needs.
 
-Outputs:
-- Market research reports.
-- Validation results.
+## Finance Agent
+
+Engine: Revenue Model Engine
+
+Responsibility:
+- Revenue model design.
+- Pricing strategy.
+- Financial projections.
 
 ---
 
@@ -62,13 +76,11 @@ Outputs:
 
 ## Product Manager Agent
 
-Responsibility:
-- Convert business goals into product requirements.
-- Manage MVP definition.
-- Prioritize features.
+Engine: Product Design Engine
 
-Outputs:
-- PRD documents.
+Responsibility:
+- Product vision and MVP definition.
+- User stories and feature prioritization.
 - Product roadmap.
 
 ---
@@ -77,108 +89,90 @@ Outputs:
 
 ## Software Architect Agent
 
+Engine: Architecture Decision Engine
+
 Responsibility:
-- Design system architecture.
-- Select appropriate technologies.
-- Define technical standards.
+- System architecture design.
+- Technical decision making.
 
-Outputs:
-- Architecture documents.
-- Technical decisions.
+## Technology Agent
 
----
+Engine: Technology Selection Engine
+
+Responsibility:
+- Evaluate and select technology stack.
+
+## Security Agent
+
+Engine: Security Analysis Engine
+
+Responsibility:
+- Security requirements and risk analysis.
 
 ## Developer Agent
 
+Engine: Development Planning Engine
+
 Responsibility:
-- Generate and modify code.
-- Follow technical standards.
-- Explain implementation steps.
+- Implementation guidance and code generation.
 
-Rules:
-- Never make irreversible changes without approval.
-- Provide commands for human executor.
+## QA Agent
 
-Outputs:
-- Source code.
-- Technical documentation.
+Engine: Testing and Quality Engine
+
+Responsibility:
+- Testing strategy and quality assurance.
 
 ---
 
-# Growth Department
+# Marketing Department
 
 ## Marketing Agent
 
-Responsibility:
-- Marketing strategy.
-- Customer acquisition.
-- Campaign planning.
+Engine: Go-To-Market Engine
 
-Outputs:
-- Marketing plans.
-- Growth experiments.
+Responsibility:
+- Marketing strategy and channels.
+- Launch planning.
+- Customer acquisition and growth.
 
 ---
 
-## Sales Agent
+# Support Department
+
+## Documentation Agent
+
+Engine: Documentation Engine
 
 Responsibility:
-- Sales process design.
-- Customer communication strategy.
-- Revenue improvement.
+- All project and system documentation.
 
-Outputs:
-- Sales plans.
-- Customer acquisition methods.
+## Continuity Agent
 
----
-
-# Finance Department
-
-## Finance Agent
+Engine: Continuity Engine
 
 Responsibility:
-- Revenue modeling.
-- Cost analysis.
-- Financial planning.
-
-Outputs:
-- Financial reports.
-- Business projections.
-
----
-
-# Operations Department
-
-## Operations Agent
-
-Responsibility:
-- Process improvement.
-- Monitoring.
-- Operational documentation.
-
-Outputs:
-- Operational procedures.
+- Session recovery and multi-AI continuity.
 
 ---
 
 # Human Executor
 
 Responsibility:
-
-- Execute external commands.
+- Execute terminal commands.
 - Manage accounts and permissions.
 - Provide real-world information.
 - Confirm irreversible actions.
 
-The human executor is the final authority for external operations.
+The human executor is the final authority for all operations.
 
 ---
 
 # Collaboration Rules
 
-- Agents communicate through documented files.
+- Agents communicate through repository files.
 - Repository is the source of truth.
 - Important decisions must be recorded.
 - AI must not assume missing information.
 - Human confirmation is required before operational changes.
+- Business engines must complete before technical engines.
