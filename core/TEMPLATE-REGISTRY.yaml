@@ -1,0 +1,48 @@
+template_registry:
+  version: "1.0"
+
+purpose:
+  description: >
+    Central registry for all AI-VOS project templates.
+    Defines available templates, versions, status and intended usage.
+
+principles:
+  - Templates must have a documented purpose.
+  - Templates must be validated before official adoption.
+  - Project repositories created from templates remain independent.
+  - Template changes follow AI-VOS improvement workflow.
+
+validation_required_before_release: true
+
+templates:
+
+  - name: project-standard
+    path: templates/project-standard/
+    version: "1.0"
+    type: generic-project
+    status: active
+    usage:
+      - Business projects
+      - Research projects
+      - Documentation projects
+    governance:
+      approval_required: true
+      validation_required: true
+
+  - name: software-project-v1
+    path: workspace/templates/software-project-v1/
+    version: "1.0"
+    type: software-project
+    status: active
+    usage:
+      - Software development projects
+    governance:
+      approval_required: true
+      validation_required: true
+
+governance:
+  approval_required: true
+  validation_required_before_official_release: true
+  template_changes_follow:
+    - AI-VOS improvement workflow
+    - Decision recording process

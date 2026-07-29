@@ -6,7 +6,7 @@ Date: 2026-07-28
 
 # Active Task
 
-AI-VOS v1.0.0 Operational Readiness
+AI-VOS v0.2 Project Template System Design
 
 ---
 
@@ -24,10 +24,10 @@ AI-VOS v1.0.0 Operational Readiness
 
 # Next Development Activities
 
-1. Validate AI-VOS using real project scenarios.
-2. Create project repository templates.
-3. Test new project initialization workflow.
-4. Collect improvement proposals separately.
+1. Design reusable project templates.
+2. Standardize project initialization packages.
+3. Validate templates with multiple project scenarios.
+4. Prepare foundation for execution runtime.
 
 ---
 

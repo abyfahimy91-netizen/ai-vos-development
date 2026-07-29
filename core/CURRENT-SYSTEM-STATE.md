@@ -23,7 +23,10 @@ Status: Active & Stable
 ## Architecture & Core Engines
 - Engine-based AI-VOS architecture fully specified and operational.
 - All 8 Engines implemented, validated, and integrated.
-- Software Project Template Version 1 active.
+- Project template system initialized.
+- Registered project templates:
+  - project-standard v1.0
+  - software-project-v1 v1.0
 
 ## Documentation & Operator Guide
 - Protocol Entry (`boot/AI-ENTRY.md`) active.
@@ -36,5 +39,6 @@ Status: Active & Stable
 
 # Next Recommended Development Order
 
-1. Monitor real-world deployments using AI-VOS v1.0.0.
-2. Develop optional CLI tools or automated engine orchestrators (v1.1 roadmap).
+1. Complete reusable project template architecture.
+2. Validate project initialization workflow with multiple scenarios.
+3. Prepare execution layer foundation for future runtime development.

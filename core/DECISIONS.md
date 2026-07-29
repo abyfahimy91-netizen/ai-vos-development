@@ -61,3 +61,25 @@ Boot files control AI entry into projects.
 
 Status:
 Active
+
+
+---
+
+# Decision: Post v1.0.2 Development Direction
+
+Date: 2026-07-29
+
+## Decision
+
+After AI-VOS v1.0.2 release, development focus moves from core stabilization to reusable project template design.
+
+## Reason
+
+The AI-VOS core architecture is considered stable and frozen.
+Future expansion should occur through standardized project creation models rather than modifying the system core.
+
+## Impact
+
+- Core architecture remains protected.
+- New capabilities should be introduced through templates, workflows and runtime layers.
+- Project repositories remain independent from AI-VOS core.
