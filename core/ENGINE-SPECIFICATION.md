@@ -1,161 +1,96 @@
 # AI-VOS Engine Specification
 
-Specification Version: 0.3
+Specification Version: 1.1.0
 
 ## Purpose
 
-This document defines the standard architecture contract for all AI-VOS engines.
-
-AI-VOS capabilities must be implemented as independent engines with clear responsibilities, inputs, outputs and execution rules.
-
-The purpose is to ensure that every AI capability is explainable, maintainable and reusable.
+This document defines the standard contract for all AI-VOS engines.
+Every capability must be an independent engine with clear responsibilities.
 
 ---
 
-# Engine Definition
+# Engine Registry (12 Engines)
 
-An Engine is an independent AI capability responsible for performing a specific function inside AI-VOS.
+## Business Engines (Pipeline Order)
 
-Each engine must operate according to a defined contract.
+| # | Engine | Directory | Purpose |
+|---|--------|-----------|--------|
+| 1 | Business Analysis | core/engines/business-analysis/ | Validate ideas and market opportunities |
+| 2 | Revenue Model | core/engines/revenue-model/ | Design monetization and pricing |
+| 3 | Product Design | core/engines/product-design/ | Define product, MVP, features |
+| 4 | Go-To-Market | core/engines/go-to-market/ | Marketing, launch, growth strategy |
 
-Examples:
+## Technical Engines
 
-- Decision Engine
-- Research Engine
-- Architecture Engine
-- Technology Selection Engine
-- Security Engine
-- Documentation Engine
-- Quality Engine
-- Continuity Engine
-- Template Engine
+| # | Engine | Directory | Purpose |
+|---|--------|-----------|--------|
+| 5 | Requirement Analysis | core/engines/requirement-analysis/ | Structured requirements |
+| 6 | Continuity | core/engines/continuity/ | AI session continuity |
+| 7 | Architecture Decision | core/engines/architecture-decision/ | System architecture |
+| 8 | Technology Selection | core/engines/technology-selection/ | Technology stack |
+| 9 | Security Analysis | core/engines/security-analysis/ | Security requirements |
+| 10 | Documentation | core/engines/documentation/ | Documentation |
+| 11 | Development Planning | core/engines/development-planning/ | Development plans |
+| 12 | Testing and Quality | core/engines/testing-quality/ | Testing strategy |
+
+## Initialization Engine
+
+| Engine | Directory | Purpose |
+|--------|-----------|--------|
+| Project Initialization | core/engines/project-initialization/ | Initialize new projects |
+
+---
+
+# Business Pipeline
+
+Business Analysis --> Revenue Model --> Product Design --> Go-To-Market
+
+No technical work may begin until Business Analysis produces a Go recommendation.
+See core/PROJECT-LIFECYCLE.md for phase-to-engine mapping.
+
+---
+
+# Engine Contract Standard
+
+Every engine directory must contain:
+
+| File | Purpose |
+|------|--------|
+| ENGINE.yaml | Identity, responsibilities, inputs, outputs, rules, lifecycle |
+| README.md | Human-readable engine description |
+| INPUTS.md | Required and optional inputs |
+| OUTPUTS.md | Produced documents and artifacts |
 
 ---
 
 # Engine Design Principles
 
-Every AI-VOS Engine must:
+Every engine must:
 
-- Have a clear purpose.
+- Have a clear, single purpose.
 - Have limited and defined responsibilities.
-- Avoid overlapping responsibilities.
-- Use repository information as the primary source.
+- Avoid overlapping with other engines.
+- Use repository as primary source.
 - Avoid unsupported assumptions.
-- Explain decisions.
-- Store important outputs permanently.
+- Explain decisions with evidence.
+- Store outputs in repository.
 - Request human approval when required.
 
 ---
 
-# Engine Contract
+# Engine Lifecycle
 
-Every engine must define the following sections.
-
----
-
-# 1. Identity
-
-Each engine must define:
-
-- Engine name.
-- Engine version.
-- Purpose.
-- Owner responsibility.
+1. Initialization
+2. Input collection
+3. Analysis
+4. Decision processing
+5. Output generation
+6. Documentation update
+7. Human review
 
 ---
 
-# 2. Responsibilities
-
-This section defines exactly what the engine does.
-
-An engine must not perform tasks outside its defined responsibility.
-
-Example:
-
-Architecture Engine:
-
-Responsible for:
-
-- System architecture analysis.
-- Architecture recommendation.
-- Architecture documentation.
-
-Not responsible for:
-
-- Business decisions.
-- Marketing strategy.
-- Final human approval.
-
----
-
-# 3. Inputs
-
-Each engine must define required inputs.
-
-Possible inputs:
-
-- Repository files.
-- Project manifest.
-- Project requirements.
-- User requests.
-- Knowledge base information.
-- Research results.
-- Previous decisions.
-- Current project state.
-
-The engine must identify missing inputs before execution.
-
----
-
-# 4. Outputs
-
-Each engine must define expected outputs.
-
-Examples:
-
-- Recommendations.
-- Decision records.
-- Documentation files.
-- Task definitions.
-- Reports.
-- Implementation guidance.
-
-Outputs must be understandable by another AI system.
-
----
-
-# 5. Dependencies
-
-Each engine must define:
-
-- Required engines.
-- Required knowledge sources.
-- Required project files.
-
-Example:
-
-Architecture Engine dependencies:
-
-- Requirement Analysis Engine.
-- Research Engine.
-- Technology Knowledge Base.
-
----
-
-# 6. Execution Rules
-
-Each engine must define:
-
-- When execution starts.
-- Required conditions.
-- Required information.
-- Approval requirements.
-
-No engine may execute important operational changes without human confirmation.
-
----
-
-# 7. Failure Conditions
+# Failure Conditions
 
 An engine must stop when:
 
@@ -165,170 +100,25 @@ An engine must stop when:
 - Human approval is required.
 - Security risks are identified.
 
-The engine must explain the reason for stopping.
+---
+
+# Decision Recording
+
+Major decisions must be recorded in ARCHITECTURE-DECISIONS.md with:
+Context, Alternatives, Selected decision, Reason, Impact.
 
 ---
 
-# 8. Repository Interaction
+# Future Engines (Planned)
 
-Every engine must define:
-
-## Files Read
-
-Documents required for analysis.
-
-Examples:
-
-- PROJECT-MANIFEST.yaml
-- CURRENT-SYSTEM-STATE.md
-- DECISIONS.md
-- ROADMAP.md
-
-
-## Files Updated
-
-Documents created or modified by the engine.
-
-Examples:
-
-- Decision records.
-- Project state.
-- Documentation.
-- Tasks.
-
----
-
-# 9. Human Interaction Protocol
-
-AI-VOS follows a Human-AI cooperation model.
-
-AI responsibility:
-
-- Analysis.
-- Planning.
-- Documentation.
-- Recommendation.
-- Guidance.
-
-Human responsibility:
-
-- Execute operational commands.
-- Provide missing information.
-- Approve important changes.
-
----
-
-# 10. Evidence-Based Decision Model
-
-Every important AI decision should contain:
-
-## Evidence
-
-Information supporting the decision.
-
-Examples:
-
-- Project requirements.
-- Documentation.
-- Research results.
-- Technical standards.
-
-## Reasoning
-
-Explanation of why the decision was selected.
-
-## Recommendation
-
-Final proposed action.
-
----
-
-# 11. Technology Evolution Rule
-
-Technology decisions must consider:
-
-- Current technology status.
-- Security.
-- Performance.
-- Maintainability.
-- Community support.
-- Long-term viability.
-- Project requirements.
-
-AI must research when current information is required.
-
-Technology selection must not be based only on historical knowledge.
-
----
-
-# 12. Self Audit Protocol
-
-Before producing results, every engine must evaluate:
-
-- Did I read required repository files?
-- Do I understand the project state?
-- Am I making assumptions?
-- Is more information required?
-- Is research required?
-- Can I explain my decision?
-- Does human approval need to be requested?
-
----
-
-# 13. Decision Recording Rule
-
-Major engine decisions must be recorded in:
-
-DECISIONS.md
-
-A decision record should include:
-
-- Context.
-- Alternatives.
-- Selected decision.
-- Reason.
-- Impact.
-
----
-
-# 14. Engine Lifecycle
-
-Every engine follows this lifecycle:
-
-1. Initialization.
-2. Input collection.
-3. Analysis.
-4. Decision processing.
-5. Output generation.
-6. Documentation update.
-7. Review.
-
----
-
-# Future Engines
-
-Planned AI-VOS engines:
-
-- Requirement Analysis Engine.
-- Business Analysis Engine.
-- Product Design Engine.
-- Decision Engine.
-- Research Engine.
-- Architecture Engine.
-- Technology Selection Engine.
-- Security Engine.
-- Development Guidance Engine.
-- Testing Engine.
-- Deployment Engine.
-- Documentation Engine.
-- Continuity Engine.
-- Learning Engine.
-- Template Engine.
+- Deployment Engine
+- Learning Engine
+- Operations Engine
+- Customer Support Engine
 
 ---
 
 # Final Principle
 
-Every AI-VOS capability must be implemented as an Engine with a defined contract before becoming part of the system.
-
-The goal is not only to produce results, but to create explainable, reusable and continuously improving intelligence.
+Every AI-VOS capability must be an Engine with a defined contract.
+The goal is explainable, reusable, and continuously improving intelligence.

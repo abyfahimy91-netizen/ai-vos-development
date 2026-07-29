@@ -1,8 +1,7 @@
 # AI-VOS Project Lifecycle
 
-Version: 1.1
-
-Date: 2026-07-28
+Version: 1.1.0
+Date: 2026-07-29
 
 ---
 
@@ -11,246 +10,180 @@ Date: 2026-07-28
 This document defines the complete lifecycle for projects managed by AI-VOS.
 
 AI-VOS does not start with software development.
-
-Every project must first be understood as a business opportunity or problem to solve.
-
-The lifecycle ensures that technology is created only when it supports a validated objective.
+Every project must first be understood as a business opportunity.
+Technology is created only when it supports a validated objective.
 
 ---
 
-# Core Principle
+# Core Journey
 
-AI-VOS manages the journey:
+Idea --> Business Opportunity --> Validated Model --> Product --> Software --> Operational Business
 
-Idea
+---
 
-↓
+# Phase-to-Engine Mapping
 
-Business Opportunity
-
-↓
-
-Validated Business Model
-
-↓
-
-Product
-
-↓
-
-Software System
-
-↓
-
-Operational Business
+| Phase | Name | Primary Engine | Supporting Engines |
+|-------|------|---------------|-------------------|
+| 0 | Business Opportunity Discovery | Business Analysis Engine | - |
+| 1 | Market Validation | Business Analysis Engine | - |
+| 2 | Business Model Design | Revenue Model Engine | - |
+| 3 | Product Definition | Product Design Engine | - |
+| 4 | Software Planning | Requirement Analysis Engine | Architecture, Technology, Security |
+| 5 | Development | Development Planning Engine | Testing and Quality, Documentation |
+| 6 | Launch | Go-To-Market Engine | Deployment |
+| 7 | Growth and Improvement | Go-To-Market Engine | All engines as needed |
 
 ---
 
 # Phase 0 - Business Opportunity Discovery
 
-## Goal
+Engine: Business Analysis Engine
 
-Understand the initial idea, opportunity or existing project.
+Goal: Understand the initial idea or existing project.
 
-## AI Tasks
-
+AI Tasks:
 - Understand the original idea.
-- Identify the problem.
-- Identify potential users.
-- Identify assumptions.
-- Identify expected outcomes.
+- Identify the problem and potential users.
+- Identify assumptions and expected outcomes.
 - Detect missing information.
 
-## Required Outputs
+Outputs: Business Opportunity Document, Assumptions List, Open Questions.
 
-- Business Opportunity Document.
-- Initial Assumptions List.
-- Open Questions.
-
-## Human Confirmation
-
-Required before moving forward.
+Human Confirmation: Required before moving forward.
 
 ---
 
 # Phase 1 - Market Validation
 
-## Goal
+Engine: Business Analysis Engine
 
-Evaluate whether a real market opportunity exists.
+Goal: Evaluate whether a real market opportunity exists.
 
-## AI Tasks
-
-- Analyze market conditions.
+AI Tasks:
+- Analyze market conditions and size.
 - Identify customer segments.
 - Analyze competitors.
-- Identify customer needs.
 - Test business assumptions.
 
-## Required Outputs
+Outputs: Market Validation Report, Customer Analysis, Competition Analysis.
 
-- Market Validation Report.
-- Customer Analysis.
-- Competition Analysis.
-- Validation Risks.
-
-## Human Confirmation
-
-Required.
+Human Confirmation: Required.
 
 ---
 
 # Phase 2 - Business Model Design
 
-## Goal
+Engine: Revenue Model Engine
 
-Define how the project creates and captures value.
+Goal: Define how the project creates and captures value.
 
-## AI Tasks
-
+AI Tasks:
 - Define value proposition.
-- Identify revenue streams.
+- Identify revenue streams and pricing.
 - Analyze cost structure.
-- Identify partnerships.
-- Evaluate sustainability.
+- Create financial projections.
 
-## Required Outputs
+Outputs: Business Model Document, Revenue Model, Cost Analysis, Break-Even.
 
-- Business Model Document.
-- Revenue Model.
-- Cost Analysis.
-- Business Risks.
-
-## Human Confirmation
-
-Required.
+Human Confirmation: Required.
 
 ---
 
 # Phase 3 - Product Definition
 
-## Goal
+Engine: Product Design Engine
 
-Define the product before implementation.
+Goal: Define the product before implementation.
 
-## AI Tasks
-
-- Define product vision.
-- Identify users.
+AI Tasks:
+- Define product vision and user personas.
 - Define user journeys.
-- Prioritize features.
-- Define MVP.
+- Prioritize features (MoSCoW).
+- Define MVP scope.
 
-## Required Outputs
+Outputs: Product Requirements, User Stories, Product Roadmap.
 
-- Product Requirements Document.
-- User Stories.
-- Product Roadmap.
-
-## Human Confirmation
-
-Required.
+Human Confirmation: Required.
 
 ---
 
 # Phase 4 - Software Planning
 
-## Goal
+Primary Engine: Requirement Analysis Engine
+Supporting: Architecture Decision, Technology Selection, Security Analysis
 
-Determine whether software is required and how it should be designed.
+Goal: Design the technical solution.
 
-## AI Tasks
-
+AI Tasks:
 - Analyze software requirements.
 - Design architecture.
 - Evaluate technology options.
 - Define security requirements.
 - Create development plan.
 
-## Required Outputs
+Outputs: Requirements, Architecture, Technology Selection, Security Analysis, Dev Plan.
 
-- Requirements Analysis.
-- Architecture Decisions.
-- Technology Selection.
-- Security Analysis.
-- Development Plan.
-
-## Human Confirmation
-
-Required before implementation.
+Human Confirmation: Required before implementation.
 
 ---
 
 # Phase 5 - Development
 
-## Goal
+Primary Engine: Development Planning Engine
+Supporting: Testing and Quality, Documentation
 
-Build the approved solution.
+Goal: Build the approved solution.
 
-## AI Tasks
-
+AI Tasks:
 - Provide implementation guidance.
 - Generate code when approved.
-- Review changes.
-- Support debugging.
+- Review changes and support debugging.
 - Maintain documentation.
 
-## Rules
-
+Rules:
 - No unapproved repository changes.
 - Human executes operational commands.
-- All important decisions are documented.
+- All decisions are documented.
 
 ---
 
 # Phase 6 - Launch
 
-## Goal
+Primary Engine: Go-To-Market Engine
 
-Deploy and make the product available.
+Goal: Deploy and make the product available.
 
-## AI Tasks
-
+AI Tasks:
 - Prepare deployment plan.
+- Execute marketing and launch strategy.
 - Validate functionality.
 - Prepare operational documentation.
-- Identify launch risks.
 
-## Required Outputs
-
-- Deployment Plan.
-- Launch Checklist.
-- Operational Documentation.
+Outputs: Deployment Plan, Launch Checklist, Marketing Plan.
 
 ---
 
 # Phase 7 - Growth and Improvement
 
-## Goal
+Primary Engine: Go-To-Market Engine
+Supporting: All engines as needed
 
-Improve business performance after launch.
+Goal: Improve business performance after launch.
 
-## AI Tasks
-
+AI Tasks:
 - Analyze user feedback.
-- Improve product.
-- Optimize operations.
+- Improve product and operations.
 - Analyze revenue opportunities.
 - Suggest improvements.
 
-## Required Outputs
-
-- Growth Reports.
-- Improvement Plans.
-- New Opportunities.
+Outputs: Growth Reports, Improvement Plans.
 
 ---
 
-# Existing Project Continuation Workflow
+# Existing Project Continuation
 
-For incomplete projects:
-
-AI-VOS must:
+For incomplete projects, AI-VOS must:
 
 1. Analyze existing repository.
 2. Recover project knowledge.
@@ -259,25 +192,7 @@ AI-VOS must:
 5. Evaluate business and technical status.
 6. Create continuation plan.
 
-AI must not rewrite or change existing architecture without analysis and approval.
-
----
-
-# Project Repository Rule
-
-Each project must maintain its own repository.
-
-Project repository contains:
-
-- Business documents.
-- Requirements.
-- Architecture decisions.
-- Source code.
-- Tests.
-- Deployment information.
-- Project history.
-
-AI-VOS repository remains separate.
+AI must not rewrite existing architecture without analysis and approval.
 
 ---
 
@@ -296,5 +211,6 @@ Human approval is required before:
 # Final Principle
 
 AI-VOS does not build software first.
-
-AI-VOS first understands the problem, validates the opportunity, designs the solution, and then uses technology as a tool to create sustainable results.
+AI-VOS first understands the problem, validates the opportunity,
+designs the solution, and then uses technology as a tool
+to create sustainable results.
