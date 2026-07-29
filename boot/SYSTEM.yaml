@@ -1,7 +1,7 @@
 system:
   name: AI-VOS
   full_name: AI Virtual Operating System
-  version: "0.2"
+  version: "1.0.1"
   status: active
 
 entry_point:

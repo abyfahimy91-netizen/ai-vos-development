@@ -1,6 +1,6 @@
 # AI-VOS Current System State
 
-Version: 1.0.0
+Version: 1.0.1
 Date: 2026-07-28
 
 ## Purpose
@@ -13,7 +13,7 @@ The repository is the source of truth.
 
 # Current Phase
 
-Phase: Version 1.0.0 Official Release
+Phase: Version 1.0.1 Stable Core Release
 Status: Active & Stable
 
 ---
@@ -30,6 +30,7 @@ Status: Active & Stable
 - User Guide (`docs/USER-GUIDE.md`) published.
 - Engine Workflow (`core/ENGINE-WORKFLOW.md`) fully validated via `Scenario 01`.
 - Release Notes (`RELEASE-NOTES-v1.0.0.md`) published.
+- Core Freeze and Improvement Proposal Workflow (`v1.0.1`) implemented.
 
 ---
 

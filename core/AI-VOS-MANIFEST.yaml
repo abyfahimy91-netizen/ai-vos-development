@@ -1,7 +1,7 @@
 name: AI-VOS
 full_name: AI Virtual Operating System
-version: "0.1"
-status: foundation
+version: "1.0.1"
+status: stable
 
 purpose: "Reusable AI operating system framework for managing and developing projects."
 
@@ -46,7 +46,7 @@ layers:
     path: runtime/
 
 development:
-  phase: foundation
+  phase: operational
 
   completed:
     - repository_initialization
@@ -55,6 +55,10 @@ development:
     - project_lifecycle
     - ai_organization
     - task_management
+  - engine_architecture
+  - validation_model
+  - operational_readiness
+  - core_freeze_protocol
 
   next:
     - project_templates
