@@ -1,6 +1,6 @@
 # AI-VOS Engine Specification
 
-Version: 0.3
+Specification Version: 0.3
 
 ## Purpose
 

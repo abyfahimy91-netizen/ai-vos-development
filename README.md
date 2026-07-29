@@ -10,9 +10,9 @@ If you are an AI assistant, do NOT start by reading every file.
 
 Your mandatory workflow is:
 
-1. Read boot/AI-ENTRY.md
-2. Read core/CURRENT-SYSTEM-STATE.md
-3. Read NEXT_TASK.md
+1. Start from boot/SYSTEM.yaml.
+2. Follow the official boot sequence defined by the repository.
+3. Read only the files required by the boot process.
 4. Follow only the requested task.
 5. Never assume missing information.
 6. Always wait for human confirmation before moving to the next operational step.

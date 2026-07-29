@@ -1,6 +1,6 @@
 # AI-VOS Boot File
 
-Version: 0.3
+Protocol Version: 0.3
 
 ## Purpose
 

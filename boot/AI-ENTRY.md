@@ -1,6 +1,6 @@
 # AI-VOS AI Entry Protocol
 
-Version: 0.3
+Protocol Version: 0.3
 
 ## Purpose
 
