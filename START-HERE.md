@@ -4,6 +4,14 @@ Version: 1.1.1
 
 ---
 
+## Fastest Way to Start
+
+Open the file boot/BOOTSTRAP-PROMPT.md
+Copy its ENTIRE content and paste it into any AI assistant.
+The AI will guide you from there. No other file is needed to begin.
+
+---
+
 ## What is AI-VOS?
 
 AI-VOS is an AI operating system that helps you turn a raw idea
