@@ -1,56 +1,87 @@
 # AI-VOS Boot Protocol
 
-Version: 1.1.0
+Version: 1.1.1
 
 ## Purpose
 
-This file defines the complete startup behavior for AI systems entering AI-VOS.
+Defines post-boot behavior and operating mode selection.
 
 ---
 
 ## Boot Sequence
 
-The authoritative boot sequence is defined in `boot/SYSTEM.yaml`.
+Defined in boot/SYSTEM.yaml. Steps:
 
-Steps:
-1. Read `boot/AI-ENTRY.md` — Load behavioral rules.
-2. Read `core/PRINCIPLES.md` — Load immutable principles.
-3. Read `core/CURRENT-SYSTEM-STATE.md` — Understand current status.
-4. Read `core/ARCHITECTURE-DECISIONS.md` — Load permanent decisions.
-5. Read `core/ENGINE-SPECIFICATION.md` — Understand engine architecture.
-6. Read `core/NEXT_TASK.md` — Identify active task.
-
-After step 6, boot is complete. Begin work on the active task.
+1. boot/AI-ENTRY.md - Behavioral rules and modes.
+2. core/PRINCIPLES.md - Immutable principles.
+3. core/CURRENT-SYSTEM-STATE.md - Current status.
+4. core/ARCHITECTURE-DECISIONS.md - Permanent decisions.
+5. core/ENGINE-SPECIFICATION.md - Engine architecture.
+6. boot/AI-BOOT-PROTOCOL.md - This file. Mode selection.
 
 ---
 
-## Post-Boot Behavior
+## CRITICAL: Mode Selection (After Boot)
 
-After boot completion:
-1. Read only files required by the current task.
-2. Do not read the entire repository.
-3. Follow the Engine Workflow defined in `core/ENGINE-WORKFLOW.md`.
-4. For project work, follow `core/PROJECT-LIFECYCLE.md`.
-5. For engine details, read specific engine files in `core/engines/`.
+AI-VOS is an OPERATING SYSTEM. It builds OTHER projects.
+It does NOT work on itself unless explicitly asked.
+
+After completing boot, ASK the user:
+
+  What would you like to do?
+  A) I have a business idea or project to work on.
+  B) I want to develop or improve AI-VOS itself.
+
+### If A: PROJECT MODE (Default)
+
+1. AI-VOS repository is READ-ONLY. Do not modify it.
+2. Ask: Is this a NEW idea or an EXISTING project?
+
+   NEW idea:
+   - Start Business Analysis Engine.
+   - Follow core/PROJECT-LIFECYCLE.md phases 0-7.
+   - Create a new project repository.
+
+   EXISTING project:
+   - Start Continuity Engine.
+   - Analyze existing project repository.
+   - Create continuation plan.
+
+3. All project files go in the PROJECT repository.
+4. AI-VOS engines provide guidance and structure.
+
+### If B: SYSTEM DEVELOPMENT MODE
+
+1. Read core/NEXT_TASK.md for the active task.
+2. Read core/CURRENT-SYSTEM-STATE.md for status.
+3. Follow core/TASK-MANAGEMENT.md.
+4. Changes are made to AI-VOS repository.
 
 ---
 
-## Task Execution Rules
+## Project Mode Engine Pipeline
 
-- Follow `core/TASK-MANAGEMENT.md` for task workflow.
-- Update `core/NEXT_TASK.md` after task completion.
-- Update `core/CURRENT-SYSTEM-STATE.md` after major changes.
-- Record decisions in `core/ARCHITECTURE-DECISIONS.md`.
+For new ideas, engines execute in this order:
+
+Phase 0-1: Business Analysis Engine
+Phase 2:   Revenue Model Engine
+Phase 3:   Product Design Engine
+Phase 4:   Requirement Analysis + Architecture + Technology + Security
+Phase 5:   Development Planning + Testing
+Phase 6:   Go-To-Market Engine
+Phase 7:   Go-To-Market Engine (growth)
+
+Each phase requires human approval before proceeding.
 
 ---
 
 ## Error Handling
 
-If a boot file is missing or unreadable:
+If a boot file is missing:
 1. Stop the boot sequence.
-2. Report the missing file to the human operator.
-3. Do not guess or assume file contents.
-4. Wait for human resolution.
+2. Report to human operator.
+3. Do not guess contents.
+4. Wait for resolution.
 
 ---
 
@@ -58,6 +89,5 @@ If a boot file is missing or unreadable:
 
 At the start of every new session:
 1. Re-execute the full boot sequence.
-2. Verify `core/CURRENT-SYSTEM-STATE.md` matches expected state.
-3. Read `core/NEXT_TASK.md` for the current objective.
-4. Resume work from the last recorded state.
+2. Determine operating mode.
+3. Resume from last recorded state.

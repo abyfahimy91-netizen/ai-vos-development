@@ -1,71 +1,85 @@
 system:
   name: AI-VOS
   full_name: AI Virtual Operating System
-  version: "1.1.0"
+  version: "1.1.1"
   status: active
   description: >
     AI-VOS is an AI operating system that transforms raw ideas into
     revenue-generating businesses through structured AI-human collaboration.
-    A non-programmer human operator works with AI to build complete
-    business products from scratch or complete unfinished projects.
+    AI-VOS is the operating system. Projects are the applications.
 
 entry_point:
   file: boot/SYSTEM.yaml
   description: >
     Single official bootstrap entry point.
-    Every AI system must start here before reading any other file.
+    Every AI system must start here.
 
 boot_sequence:
   - step: 1
     file: boot/AI-ENTRY.md
-    purpose: Load AI behavioral rules and operating principles.
+    purpose: Load AI behavioral rules and operating modes.
 
   - step: 2
     file: core/PRINCIPLES.md
-    purpose: Load immutable system principles (single source of truth).
+    purpose: Load immutable system principles.
 
   - step: 3
     file: core/CURRENT-SYSTEM-STATE.md
-    purpose: Understand current version, status, and completed components.
+    purpose: Understand current version and status.
 
   - step: 4
     file: core/ARCHITECTURE-DECISIONS.md
-    purpose: Load permanent architectural and strategic decisions.
+    purpose: Load permanent decisions.
 
   - step: 5
     file: core/ENGINE-SPECIFICATION.md
-    purpose: Understand Engine-based architecture and available engines.
+    purpose: Understand engine architecture.
 
   - step: 6
-    file: core/NEXT_TASK.md
-    purpose: Identify the current active task and begin work.
+    file: boot/AI-BOOT-PROTOCOL.md
+    purpose: Load post-boot behavior and mode selection.
 
 startup_rules:
-  - Execute boot sequence in exact order. Do not skip steps.
+  - Execute boot sequence in exact order.
   - Repository is the single source of truth.
-  - Chat history is temporary. Never rely on it for decisions.
-  - Never assume missing information. Ask questions instead.
-  - Request human confirmation before any operational change.
+  - Chat history is temporary.
+  - Never assume missing information.
+  - Request human confirmation before any change.
   - After boot, read only files required by the current task.
 
 boot_completion:
   description: >
-    After completing all 6 steps, the AI is authorized to begin
-    the task defined in core/NEXT_TASK.md following the rules
-    in core/PRINCIPLES.md.
+    After completing all 6 steps, the AI must determine
+    the operating mode by asking the user.
+  mode_selection:
+    project_mode:
+      trigger: User has an idea or project to work on.
+      behavior: >
+        AI-VOS repository is READ-ONLY.
+        Follow core/PROJECT-LIFECYCLE.md.
+        Start with Business Analysis Engine for new ideas.
+        Start with Continuity Engine for existing projects.
+        All work happens in the project repository.
+    system_dev_mode:
+      trigger: User explicitly wants to develop AI-VOS itself.
+      behavior: >
+        Read core/NEXT_TASK.md for the active task.
+        Follow core/TASK-MANAGEMENT.md.
+  default: project_mode
 
 roles:
   ai:
     responsibility: >
-      Analysis, planning, reasoning, documentation, architecture,
-      technology evaluation, code generation guidance, business
-      strategy, and continuous improvement suggestions.
+      Analysis, planning, documentation, architecture,
+      business strategy, code generation guidance.
   human:
     responsibility: >
-      Execute terminal commands, validate results, approve
-      operational actions, provide domain knowledge and business context.
+      Execute commands, validate results,
+      approve changes, provide domain knowledge.
 
 final_principle:
   repository_is_memory: true
   repository_is_authoritative: true
   boot_starts_here: boot/SYSTEM.yaml
+  ai_vos_is_operating_system: true
+  projects_are_applications: true
