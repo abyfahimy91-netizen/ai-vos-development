@@ -59,7 +59,9 @@ Last Update: 1405/06/31 (2026-10-01)
 
 ## Active Work
 
-- ⭐ فاز ۰: تدوینِ `business/BUSINESS-OPPORTUNITY.md`
+- ⭐ فاز ۰: ⭐ **تصمیم‌ها ثبت شد** (`PROJECT-DECISIONS.md` · `D-001`…`D-006`)
+- ⭐ ابزارِ آزمون آماده شد (`business/toolkit/`)
+- ⏳ **منتظرِ شروعِ آزمونِ ۱۰ تعمیرکارِ تبریز**
 
 ---
 
