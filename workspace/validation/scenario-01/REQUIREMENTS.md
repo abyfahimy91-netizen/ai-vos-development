@@ -23,9 +23,7 @@ blog posts, and contact information.
 | F4 | Blog listing page | Medium | Required |
 | F5 | Blog post content pages | Medium | Required |
 | F6 | Contact page with info | Medium | Required |
-| F7 | Contact form | Low | Optional |
-
----
+| F7 | Contact form | Low | Optional | ---
 
 ## Non-Functional Requirements
 
@@ -35,9 +33,7 @@ blog posts, and contact information.
 | NF2 | Responsive design for mobile | High |
 | NF3 | Basic SEO support | Medium |
 | NF4 | Basic security | Medium |
-| NF5 | Easy content updates by owner | Medium |
-
----
+| NF5 | Easy content updates by owner | Medium | ---
 
 ## Constraints
 
@@ -49,9 +45,7 @@ blog posts, and contact information.
 | C4 | Minimal design style |
 | C5 | Owner updates content directly |
 | C6 | No admin panel needed |
-| C7 | No portfolio items initially |
-
----
+| C7 | No portfolio items initially | ---
 
 ## Answers to Questions
 

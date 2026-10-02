@@ -35,9 +35,7 @@ AI-VOS guides you through 8 phases:
 | 4 | Plan the software | Approve technical decisions |
 | 5 | Build the product | Run commands AI gives you |
 | 6 | Launch | Execute marketing plan |
-| 7 | Grow | Review and improve |
-
----
+| 7 | Grow | Review and improve | ---
 
 ## How to Start a Session
 

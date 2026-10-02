@@ -17,9 +17,7 @@
 | Overchoice | Toffler 1970 · Iyengar & Lepper 2000 | «a large variety of options **can be detrimental**» |
 | Default Effect | Johnson & Goldstein 2003 | «generally accept the default option» |
 | Loss Aversion | Kahneman & Tversky 1979 | «worse if **framed as a loss**» |
-| Social Proof | Cialdini 1984 | «used **in ambiguous social situations**» — دقیقاً وضعیت ما: «مکانیک خوب کجاست؟» یعنی ابهام |
-
----
+| Social Proof | Cialdini 1984 | «used **in ambiguous social situations**» — دقیقاً وضعیت ما: «مکانیک خوب کجاست؟» یعنی ابهام | ---
 
 ## ۲) حکم صادقانه
 
@@ -45,9 +43,7 @@
 | ۳ | ترس از زیان | پیام ضرر نه فایده | «ممکن است پولت را بسوزانی» نه «کمک می‌کنیم» |
 | ۴ | فزونی گزینه | کم‌کردن انتخاب | صفحهٔ اصلی نباید شلوغ باشد؛ یک سؤال، یک دکمه |
 | ۵ | اثبات اجتماعی | نظر دیگران در ابهام | رتبه‌بندی = کاهش ابهام، نه تبلیغ |
-| ۶ | کاهش ریسک | اثبات امنیت نه ارزش | برگهٔ تعمیرگاه: «می‌دانی چه می‌دهی» |
-
----
+| ۶ | کاهش ریسک | اثبات امنیت نه ارزش | برگهٔ تعمیرگاه: «می‌دانی چه می‌دهی» | ---
 
 ## ۴) تصمیم D-009
 

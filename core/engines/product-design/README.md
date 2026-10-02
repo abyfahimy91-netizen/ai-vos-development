@@ -11,8 +11,7 @@ and revenue model. Bridges business strategy and technical implementation.
 ## Pipeline Position
 
 Business Analysis --> Revenue Model --> Product Design --> Go-To-Market
-                                              |
-                                              v
+                                              | v
                                       [Technical Engines]
 
 ## Key Outputs

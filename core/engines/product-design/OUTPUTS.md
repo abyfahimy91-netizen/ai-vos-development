@@ -5,9 +5,7 @@
 | Output | File | Description |
 |--------|------|-------------|
 | Requirements | requirements/REQUIREMENTS.md | Product requirements and specs. |
-| User Stories | requirements/USER-STORIES.md | Stories with acceptance criteria. |
-
-## Document Contents
+| User Stories | requirements/USER-STORIES.md | Stories with acceptance criteria. | ## Document Contents
 
 ### Requirements includes:
 1. Product Vision Statement

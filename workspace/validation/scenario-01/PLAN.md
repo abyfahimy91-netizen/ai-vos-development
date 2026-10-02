@@ -22,9 +22,7 @@ Status: Approved
 | T10 | Add Vazirmatn font | T6 | 10 min | Medium |
 | T11 | Responsive testing | T5-T10 | 20 min | Medium |
 | T12 | Basic SEO | T11 | 15 min | Low |
-| T13 | Documentation | T11 | 15 min | Low |
-
----
+| T13 | Documentation | T11 | 15 min | Low | ---
 
 ## Milestones
 

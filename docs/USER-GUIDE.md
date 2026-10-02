@@ -44,9 +44,7 @@ AI does the thinking. You do the deciding and executing.
 | 1 | Business Analysis | Validates your idea and market |
 | 2 | Revenue Model | Designs how you make money |
 | 3 | Product Design | Defines what to build (MVP) |
-| 4 | Go-To-Market | Plans marketing and launch |
-
-### Technical Engines (Use After Business Validation)
+| 4 | Go-To-Market | Plans marketing and launch | ### Technical Engines (Use After Business Validation)
 
 | # | Engine | What It Does |
 |---|--------|-------------|
@@ -57,9 +55,7 @@ AI does the thinking. You do the deciding and executing.
 | 9 | Security Analysis | Identifies security risks |
 | 10 | Documentation | Creates documentation |
 | 11 | Development Planning | Plans development tasks |
-| 12 | Testing and Quality | Ensures quality |
-
----
+| 12 | Testing and Quality | Ensures quality | ---
 
 ## 5. Typical Workflow
 

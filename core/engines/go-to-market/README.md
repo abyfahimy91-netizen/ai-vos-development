@@ -11,8 +11,7 @@ This is the LAST engine in the business pipeline.
 ## Pipeline Position
 
 Business Analysis --> Revenue Model --> Product Design --> Go-To-Market
-                                                               |
-                                                               v
+                                                               | v
                                                       [Launch and Growth]
 
 ## Key Outputs

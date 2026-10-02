@@ -1,4 +1,4 @@
-# ⭐ BAMA.IR — راهنمای استخراج (۱۴۰۵/۰۶/۱۸)
+# BAMA.IR — راهنمای استخراج (۱۴۰۵/۰۶/۱۸)
 
 **تاریخ کشف:** ۲۹ سپتامبر ۲۰۲۶ · **حجم واردشده:** ۱۷۳٬۰۰۰ رکورد
 **ابزار:** `/opt/bharvest.py` (برداشت) · `/opt/carnameh/bama_load.py` (بارگذاری) ·
@@ -12,24 +12,22 @@
 
 | داده | چرا بی‌بدیل است |
 |---|---|
-| **۵۹٬۸۷۴ خط مشخصات تیپ** با پرچم `present=false` | ⭐ **فهرست «دارد ندارد»** — باما آپشن‌های *نصب‌نشده* را هم با آیکن ضرب درج می‌کند. ۲۲٬۲۴۴ مورد. هیچ منبع دیگری دانش منفی ندارد. |
+| **۵۹٬۸۷۴ خط مشخصات تیپ** با پرچم `present=false` | **فهرست «دارد ندارد»** — باما آپشن‌های *نصب‌نشده* را هم با آیکن ضرب درج می‌کند. ۲۲٬۲۴۴ مورد. هیچ منبع دیگری دانش منفی ندارد. |
 | **۳٬۸۱۶ نقطه قوت/ضعف** | ورودی مستقیم موتور تشخیص (`bama_trim_issue`) |
 | **۵۹٬۴۵۹ نقطهٔ قیمت روزانه** + ۹٬۸۸۴ آگهی | قیمت بازار واقعی با تاریخچه |
-| **نام‌گذاری بازار** ۱٬۳۵۴ تیپ | «کوییک SR دنده ای»، «دنا پلاس EF7 5 دنده توربو» |
-
----
+| **نام‌گذاری بازار** ۱٬۳۵۴ تیپ | «کوییک SR دنده ای»، «دنا پلاس EF7 5 دنده توربو» | ---
 
 ## ۲) نقطه‌های ورود (بدون کلید، بدون لاگین)
 
 ```
-GET /gen/api/filters/vehicle?vehicleCategory=car     ⭐ ۱۸۷ برند → ۱۲۸۰ مدل → ۱۳۵۴ تیپ
+GET /gen/api/filters/vehicle?vehicleCategory=car ۱۸۷ برند → ۱۲۸۰ مدل → ۱۳۵۴ تیپ
 GET /gen/api/filters/{body|fuel|cylinder|color|region|year|...}?vehicleCategory=car
-GET /cad/api/search?path=%2Fcar&vehicle=<brand>&pageIndex=N&pageSize=12   ⭐ آگهی‌ها
-GET /car-reviews/<brand>                              فهرست صفحه‌های -specs-
-GET /car-reviews/<brand>/<model>-specs-<id>-<trim>    ⭐ مشخصات + امتیاز + قوت/ضعف
-GET /price/<brand>_<model>_<trim>                     ⭐ تاریخچهٔ قیمت روزانه
-GET /nws/api/News/list?pageIndex=N&category=<id>      ⭐ اخبار
-GET /nws/api/News/detail?id=<id>                       متن کامل
+GET /cad/api/search?path=%2Fcar&vehicle=<brand>&pageIndex=N&pageSize=12 آگهی‌ها
+GET /car-reviews/<brand> فهرست صفحه‌های -specs-
+GET /car-reviews/<brand>/<model>-specs-<id>-<trim> مشخصات + امتیاز + قوت/ضعف
+GET /price/<brand>_<model>_<trim> تاریخچهٔ قیمت روزانه
+GET /nws/api/News/list?pageIndex=N&category=<id> اخبار
+GET /nws/api/News/detail?id=<id> متن کامل
 GET /cad/api/BasicInfo/{vehicles|brands|attributes|bodystatuses|colors}
 ```
 
@@ -38,9 +36,7 @@ GET /cad/api/BasicInfo/{vehicles|brands|attributes|bodystatuses|colors}
 |---|---|
 | برند | `vehicle=<brand>` (با لوله `\|` برای مدل/تیپ) |
 | صفحه‌بندی آگهی | `pageIndex` — بی‌نهایت، `has_next` همیشه true |
-| دستهٔ خبر | عددی: `2`=خودرو `4`=شرایط فروش `5`=بازار `6`=بررسی **`9`=تعمیرات** `11`=ویژه `12`=موتور |
-
-⛔ **HTML صفحات `/car?...` ایندکس‌شده در کش است** ⇒ فیلتر را نادیده می‌گیرد.
+| دستهٔ خبر | عددی: `2`=خودرو `4`=شرایط فروش `5`=بازار `6`=بررسی **`9`=تعمیرات** `11`=ویژه `12`=موتور | ⛔ **HTML صفحات `/car?...` ایندکس‌شده در کش است** ⇒ فیلتر را نادیده می‌گیرد.
 همیشه از `/cad/api/search` استفاده کن، نه از HTML.
 
 ---
@@ -61,14 +57,14 @@ APIهای JSON **هرگز** چالش نمی‌گیرند.
 
 ---
 
-## ۴) ⭐ سه باگی که هر کدام داده را بی‌سروصدا خراب کرد
+## ۴) سه باگی که هر کدام داده را بی‌سروصدا خراب کرد
 
 ### الف) «آخرین آیتم هر گروه گم می‌شد»
 ```python
 # ❌ ن lookahead دارد ⇒ آخرین آیتم هیچ‌وقت match نمی‌شود
 ITEMDIV_RE = re.compile(r'<div class="spec-item"(.*?)(?=<div class="spec-item"|<div class="spec-box")')
 # ✅
-for chunk in seg.split('<div class="spec-item"')[1:]: ...
+for chunk in seg.split('<div class="spec-item"')[1:]:...
 ```
 اثر: ۵۲٬۵۲۸ → **۵۹٬۸۷۴** ردیف (+۷٬۳۴۶). «نسل (کد اتاق)»، «حجم باک» و
 «سال های موجود» دقیقاً همان‌هایی بودند که هر بار می‌افتادند.
@@ -91,8 +87,8 @@ for chunk in seg.split('<div class="spec-item"')[1:]: ...
 
 ## ۵) دام‌های دیگر
 - **اسلاگ فقط داخل والد یکتاست.** `mt`/`lx`/`turbo` صدها بار تکرار می‌شوند
-  ⇒ `code` به‌تنهایی PK نیست. بار اول ۱۱۰ مدل و ۶۵۲ تیپ را بی‌سروصدا از دست داد.
-  راه‌حل: `model_key` / `trim_key` با surrogate + `UNIQUE(brand_code, code)`.
+ ⇒ `code` به‌تنهایی PK نیست. بار اول ۱۱۰ مدل و ۶۵۲ تیپ را بی‌سروصدا از دست داد.
+ راه‌حل: `model_key` / `trim_key` با surrogate + `UNIQUE(brand_code, code)`.
 - **۹۴۴ تیپ صفحهٔ قیمت ندارند** (فقط خودروهای صفر/وارداتی). این نقص نیست.
 - صفحهٔ `/news` مرورگر داخلی را **قفل می‌کند** (بیش از ۳۰۰ ثانیه) — با API بخوان.
 - `/api/News/*` روی دامنهٔ اصلی **۵۰۴** می‌دهد؛ مسیر درست `/nws/api/News/*` است.

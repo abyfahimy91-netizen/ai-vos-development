@@ -11,10 +11,8 @@
 |---|---|
 | کلید `id_ed25519_carnameh` | **گم شد** با محیط قبلی. فایل‌های پشتیبان Minis مربوط به مرداد/شهریور و قبل از شروع پروژه‌اند |
 | راه‌حل فعلی | کلید پیش‌فرض `/root/.ssh/id_ed25519` اضافه شده ⇒ `ssh root@[SERVER-IP]` بدون `-i` کار می‌کند |
-| رمز | در `CAR_VPS_ROOT_PASS` هست ولی **ورود با رمز روی سرور غیرفعال است** (`Permission denied (publickey)`) |
-
-```bash
-ssh root@[SERVER-IP]          # بدون -i
+| رمز | در `CAR_VPS_ROOT_PASS` هست ولی **ورود با رمز روی سرور غیرفعال است** (`Permission denied (publickey)`) | ```bash
+ssh root@[SERVER-IP] # بدون -i
 PGPASSFILE=/root/.pgpass psql -h localhost -U carnameh -d carnameh
 ```
 
@@ -35,9 +33,7 @@ kill -HUP $(pgrep -f "gunicorn carnameh_backend" | head -1)
 | gunicorn | **پروسهٔ bare است، نه systemd** ⇒ فقط با `kill -HUP` بازخوانی می‌شود |
 | پایتون | `/opt/carnameh/venv/bin/python` (پایتون سیستم `psycopg2` ندارد) |
 | دیتابیس | PostgreSQL 16.15 · `carnameh` · **۱۰۵ جدول · ۲۶۹ مگابایت** |
-| بکاپ | `/usr/local/bin/carnameh-backup.sh` ⇒ `/var/backups/carnameh/*.dump` (۴۳MB) |
-
-### نکات زیرساختی
+| بکاپ | `/usr/local/bin/carnameh-backup.sh` ⇒ `/var/backups/carnameh/*.dump` (۴۳MB) | ### نکات زیرساختی
 - **swap ۴ گیگ حیاتی است** (رم ۲ گیگ)
 - شبکهٔ این محیط دادهٔ حجیم را خفه می‌کند: سری ۳٫۷KB/s · ۸ کانکشن موازی ۴۴KB/s
 - ⛔ **ترب و امپراطور پشت CAPTCHA**
@@ -51,16 +47,14 @@ kill -HUP $(pgrep -f "gunicorn carnameh_backend" | head -1)
 | جدول | ردیف | چیست |
 |---|---:|---|
 | `articles` | ۶٬۰۶۵ | ۵٬۷۴۶ مقالهٔ همراه مکانیک + ۲۲۷ مکانیک‌شو + ۹۲ متن گفتار یوتیوب |
-| `guild_rates` | ۴٬۵۰۹ | ⭐ نرخ مصوب اتحادیه · ۴۷ مدل/تیپ · ۲۲۱ خدمت |
+| `guild_rates` | ۴٬۵۰۹ | نرخ مصوب اتحادیه · ۴۷ مدل/تیپ · ۲۲۱ خدمت |
 | `search_queries` | ۱٬۸۸۶ | پرس‌وجوی واقعی ایرانی (Autocomplete fa/IR) |
-| `symptom_language` | ۱٬۳۲۶ | ⭐ زبان واقعی مردم + بازدید یوتیوب |
+| `symptom_language` | ۱٬۳۲۶ | زبان واقعی مردم + بازدید یوتیوب |
 | `manual_texts` | ۱۴۴ | ۵۷MB متن دفترچه |
 | `manual_sections` | ۱٬۳۸۶ | تب‌های دفترچه |
 | `car_specs` · `symptoms` · `parts` | ۵٬۰۴۱ · ۱٬۲۷۸ · ۱٬۷۳۶ | هستهٔ اصلی |
-| `research_findings` | ۲۴ | ⭐ رجیستری تحقیق + ۱۷ سؤال باز |
-| `rejected_rows` | ۹۶۴ | آشغال خزش، بازیابی‌شدنی |
-
-### ⭐ واحد پول — بررسی شد، سالم است
+| `research_findings` | ۲۴ | رجیستری تحقیق + ۱۷ سؤال باز |
+| `rejected_rows` | ۹۶۴ | آشغال خزش، بازیابی‌شدنی | ### واحد پول — بررسی شد، سالم است
 ستون‌های `price_rial` **واقعاً ریال‌اند** و `price_toman` (تولیدی، تقسیم بر ۱۰) درست است.
 مبنای مقایسه: `car_price_index` پراید = ۶٬۵۰۰٬۰۰۰٬۰۰۰ ریال = ۶۵۰ مگ تومان.
 > ⛔ ولی **متن سند تحویل سشن قبل برچسب اشتباه داشت**: «بازه ۴۰٬۰۰۰ تا ۱۱٬۴۰۰٬۰۰۰ تومان»
@@ -74,13 +68,11 @@ kill -HUP $(pgrep -f "gunicorn carnameh_backend" | head -1)
 |---|---:|---:|---:|---:|
 | موتور | ۱۱ | ۱۱ | ۶ | ۳۳ |
 | خنک‌کاری | ۸ | ۶ | ۱۲ | ۲۵ |
-| ترمز | ۱۰ | ۹ | ۸ | ۲۹ |
-
-- ورودی: `diagnose/<system>/` · خروجی: `diagnose/<system>/result/`
+| ترمز | ۱۰ | ۹ | ۸ | ۲۹ | - ورودی: `diagnose/<system>/` · خروجی: `diagnose/<system>/result/`
 - موتور: `/opt/carnameh/diagnosis_engine.py` · تست: `test_brake_engine.py` و `test_engine.py`
 - seed‌ها: `seed_brake_engine.sql` · `seed_entry_menu.sql`
 
-### ⭐ قیمت اجرت از نرخ واقعی می‌آید
+### قیمت اجرت از نرخ واقعی می‌آید
 `labour_rial` روی علت‌های جدید **عمداً ۰ است** (عدد از خودمان ساخته نمی‌شود).
 موتور به‌جای آن از `diagn_fault_services → guild_rates` می‌خواند:
 بازهٔ min/میانه/max به تفکیک مدل. متد: `KnowledgeBase.guild_labour()`.
@@ -100,9 +92,7 @@ GET را تست نکن — فرم را واقعاً پر کن.**
 | ۳ | `dj.connection` بدون `ensure_connection()` | با ۲ ورکر gunicorn، هر ورکر در اولین درخواست ۵۰۰ می‌داد |
 | ۴ | `roots[system]` فقط **یکی** از چند سؤال ریشه‌ای را نگه می‌داشت | از ۵ شاخهٔ ترمز، **۴ شاخه هرگز به کاربر نشان داده نمی‌شد** |
 | ۵ | `{{ probability|floatformat:0 }}` روی مقدار ۰..۱ | «احتمال ۱ درصد» به‌جای ۱۰۰٪ |
-| ۶ | `stats` هرگز در context پر نمی‌شد | فوتر همیشه «۰ دفترچه · ۰ نشانه» |
-
-همه رفع و با سفر کامل HTTP (منو → سؤال → نتیجه) تست شد.
+| ۶ | `stats` هرگز در context پر نمی‌شد | فوتر همیشه «۰ دفترچه · ۰ نشانه» | همه رفع و با سفر کامل HTTP (منو → سؤال → نتیجه) تست شد.
 
 ---
 
@@ -110,13 +100,11 @@ GET را تست نکن — فرم را واقعاً پر کن.**
 
 | فایل | نقش |
 |---|---|
-| `../car-kb/strategy/BUSINESS-PLAN-v3.0-draft.md` | ⭐⭐ سند فعال کسب‌وکار — ۱۵ بخش |
-| `../car-kb/pain-research/REPORT.md` | ⭐⭐ پژوهش درد بازار — ۱٬۱۰۷ پرس‌وجو |
-| `METHODOLOGY-PRICING-RULE.md` | ⭐ قاعدهٔ PR-01: هر قیمت تاریخ دارد |
-| `research/07-guild-rates-1405/STATUS.md` | ⭐ **یافتهٔ سشن دوم: نرخ‌نامهٔ رسمی ۱۴۰۵ منتشر نشده** |
-| `DESIGN-SUPERSEDED.md` | سندی که اشتباه بود — درس‌هایش بماند |
-
-⛔ `DESIGN.md` بایگانی است.
+| `../car-kb/strategy/BUSINESS-PLAN-v3.0-draft.md` | سند فعال کسب‌وکار — ۱۵ بخش |
+| `../car-kb/pain-research/REPORT.md` | پژوهش درد بازار — ۱٬۱۰۷ پرس‌وجو |
+| `METHODOLOGY-PRICING-RULE.md` | قاعدهٔ PR-01: هر قیمت تاریخ دارد |
+| `research/07-guild-rates-1405/STATUS.md` | **یافتهٔ سشن دوم: نرخ‌نامهٔ رسمی ۱۴۰۵ منتشر نشده** |
+| `DESIGN-SUPERSEDED.md` | سندی که اشتباه بود — درس‌هایش بماند | ⛔ `DESIGN.md` بایگانی است.
 
 ---
 
@@ -130,9 +118,7 @@ GET را تست نکن — فرم را واقعاً پر کن.**
 | 🟠 ۴ | **متن «نتیجه پیدا نشد» گمراه‌کننده است** | وقتی کاربر «نمی‌دانم» می‌زند می‌گوید «قاعدهٔ تشخیصی ثبت نشده» — در حالی که قاعده هست، فقط پاسخ نیست | ⬜ |
 | 🟡 ۵ | درخت سؤال گیربکس، تعلیق، برق، سوخت، اگزوز | ۷ سیستم هنوز بدون درخت‌اند (۳۰۲ می‌دهند) | ⬜ |
 | 🟡 ۶ | **OCR ۴۶ دفترچهٔ ناخوانا** | ابزار روی سرور نصب نیست | ⬜ |
-| 🟡 ۷ | نام برند | «کارنامه» نام رقیب است | ⬜ |
-
-**۱۷ سؤال باز** در ویوی `research_open_questions`.
+| 🟡 ۷ | نام برند | «کارنامه» نام رقیب است | ⬜ | **۱۷ سؤال باز** در ویوی `research_open_questions`.
 
 ---
 
@@ -143,7 +129,7 @@ ssh root@[SERVER-IP]
 # ۱) وضعیت:
 PGPASSFILE=/root/.pgpass psql -h localhost -U carnameh -d carnameh -c "select * from diagn_coverage"
 # ۲) تست موتور (بدون ری‌استارت):
-cd /opt/carnameh && PGPASSFILE=/root/.pgpass ./venv/bin/python test_brake_engine.py
+cd /opt/carnameh && PGPASSFILE=/root/.pgpass./venv/bin/python test_brake_engine.py
 # ۳) بکاپ قبل از هر تغییر:
 /usr/local/bin/carnameh-backup.sh
 ```

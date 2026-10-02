@@ -98,9 +98,7 @@ Record any issues found during validation:
 
 | # | Phase | Issue | Severity | Status |
 |---|-------|-------|----------|--------|
-| | | | | |
-
----
+| | | | | | ---
 
 ## Status
 

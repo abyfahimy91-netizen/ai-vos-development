@@ -4,9 +4,7 @@
 
 | Output | File | Description |
 |--------|------|-------------|
-| Business Model | business/BUSINESS-MODEL.md | Complete revenue and pricing strategy. |
-
-## Document Contents
+| Business Model | business/BUSINESS-MODEL.md | Complete revenue and pricing strategy. | ## Document Contents
 
 1. Revenue Stream Overview
 2. Pricing Strategy (tiers, plans, subscription vs one-time)

@@ -5,9 +5,7 @@
 | Output | File | Description |
 |--------|------|-------------|
 | Opportunity Report | business/BUSINESS-OPPORTUNITY.md | Complete business analysis. |
-| Market Validation | business/MARKET-VALIDATION.md | Market demand evidence. |
-
-## Report Contents
+| Market Validation | business/MARKET-VALIDATION.md | Market demand evidence. | ## Report Contents
 
 1. Executive Summary
 2. Problem Definition

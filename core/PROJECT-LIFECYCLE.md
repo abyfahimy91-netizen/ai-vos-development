@@ -32,9 +32,7 @@ Idea --> Business Opportunity --> Validated Model --> Product --> Software --> O
 | 4 | Software Planning | Requirement Analysis Engine | Architecture, Technology, Security |
 | 5 | Development | Development Planning Engine | Testing and Quality, Documentation |
 | 6 | Launch | Go-To-Market Engine | Deployment |
-| 7 | Growth and Improvement | Go-To-Market Engine | All engines as needed |
-
----
+| 7 | Growth and Improvement | Go-To-Market Engine | All engines as needed | ---
 
 # Phase 0 - Business Opportunity Discovery
 

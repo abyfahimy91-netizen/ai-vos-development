@@ -25,9 +25,7 @@ with a human executor. Each role maps to one or more engines.
 | QA Agent | Testing and Quality Engine | 5 |
 | Documentation Agent | Documentation Engine | All |
 | Marketing Agent | Go-To-Market Engine | 6-7 |
-| Continuity Agent | Continuity Engine | All |
-
----
+| Continuity Agent | Continuity Engine | All | ---
 
 # Executive Layer
 

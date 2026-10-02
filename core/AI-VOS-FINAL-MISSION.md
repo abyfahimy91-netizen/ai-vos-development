@@ -29,9 +29,7 @@ Each step is powered by a dedicated engine:
 | Define Product | Product Design Engine | MVP Specification |
 | Plan Software | Technical Engines (5-12) | Architecture + Dev Plan |
 | Launch | Go-To-Market Engine | Marketing + Launch Plan |
-| Grow | Go-To-Market Engine | Growth Strategy |
-
----
+| Grow | Go-To-Market Engine | Growth Strategy | ---
 
 # Main Capabilities
 

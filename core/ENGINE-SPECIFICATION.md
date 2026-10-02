@@ -18,9 +18,7 @@ Every capability must be an independent engine with clear responsibilities.
 | 1 | Business Analysis | core/engines/business-analysis/ | Validate ideas and market opportunities |
 | 2 | Revenue Model | core/engines/revenue-model/ | Design monetization and pricing |
 | 3 | Product Design | core/engines/product-design/ | Define product, MVP, features |
-| 4 | Go-To-Market | core/engines/go-to-market/ | Marketing, launch, growth strategy |
-
-## Technical Engines
+| 4 | Go-To-Market | core/engines/go-to-market/ | Marketing, launch, growth strategy | ## Technical Engines
 
 | # | Engine | Directory | Purpose |
 |---|--------|-----------|--------|
@@ -31,15 +29,11 @@ Every capability must be an independent engine with clear responsibilities.
 | 9 | Security Analysis | core/engines/security-analysis/ | Security requirements |
 | 10 | Documentation | core/engines/documentation/ | Documentation |
 | 11 | Development Planning | core/engines/development-planning/ | Development plans |
-| 12 | Testing and Quality | core/engines/testing-quality/ | Testing strategy |
-
-## Initialization Engine
+| 12 | Testing and Quality | core/engines/testing-quality/ | Testing strategy | ## Initialization Engine
 
 | Engine | Directory | Purpose |
 |--------|-----------|--------|
-| Project Initialization | core/engines/project-initialization/ | Initialize new projects |
-
----
+| Project Initialization | core/engines/project-initialization/ | Initialize new projects | ---
 
 # Business Pipeline
 
@@ -59,9 +53,7 @@ Every engine directory must contain:
 | ENGINE.yaml | Identity, responsibilities, inputs, outputs, rules, lifecycle |
 | README.md | Human-readable engine description |
 | INPUTS.md | Required and optional inputs |
-| OUTPUTS.md | Produced documents and artifacts |
-
----
+| OUTPUTS.md | Produced documents and artifacts | ---
 
 # Engine Design Principles
 

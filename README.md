@@ -57,9 +57,7 @@ AI-VOS uses an Engine-based architecture with 12 engines:
 | core/engines/ | 12 engine definitions |
 | templates/ | Reusable project templates |
 | workspace/ | Project working area |
-| docs/ | User guides |
-
----
+| docs/ | User guides | ---
 
 ## For AI Systems
 

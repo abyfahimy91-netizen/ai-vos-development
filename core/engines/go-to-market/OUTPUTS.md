@@ -5,9 +5,7 @@
 | Output | File | Description |
 |--------|------|-------------|
 | GTM Strategy | business/GO-TO-MARKET.md | Complete launch and growth strategy. |
-| Deployment Plan | deployment/DEPLOYMENT.md | Technical and operational launch plan. |
-
-## Document Contents
+| Deployment Plan | deployment/DEPLOYMENT.md | Technical and operational launch plan. | ## Document Contents
 
 ### Go-To-Market Strategy includes:
 1. Marketing Strategy Overview

@@ -50,7 +50,7 @@ fi
 # ─── G2 دروازهٔ کد و داده ───
 echo ""
 echo "-- 2) G2 قوانین کد و داده --"
-for L in L-05 L-08 L-12 L-34 L-44 L-52 L-53 L-54 L-57 L-58 L-59 L-60; do
+for L in L-05 L-08 L-09 L-12 L-34 L-44 L-52 L-53 L-54 L-57 L-58 L-59 L-60; do
   if grep -qF "$L" "$SPEC"; then pass "قانون $L در سند توسعه"; else bad "قانون $L در سند توسعه نیست"; fi
 done
 if [ -f "$GATE" ]; then
@@ -82,7 +82,21 @@ else pass "توکن GitHub یافت نشد"; fi
 
 # ─── قاعدهٔ باور (L-59) ───
 echo ""
-echo "-- 5) L-59 باورهای سنجیده‌شده --"
+echo "-- 5) قانونِ حاکمِ آشنایی (L-09) --"
+for t in "جهنم آشنا" "پذیرش = ارزش" "تعمیرگاه‌یاب"; do
+  if grep -qF "$t" "$SPEC"; then pass "در سند توسعه آمده: $t"; else bad "سند توسعه فاقد: $t"; fi
+done
+for f in THE-FAMILIARITY-LAW.md RESEARCH-FAMILIARITY-SCIENCE.md RESEARCH-LEXICON-PERSIAN.md; do
+  if [ -f "$ROOT/docs/00-vision/$f" ]; then pass "سند مرجع حاضر: $f"; else bad "سند مرجع نیست: $f"; fi
+done
+if [ -f "$ROOT/docs/03-specs/DESIGN-NOTE-TEMPLATE.md" ] && grep -qF "کاربر این را با چه کلمه" "$ROOT/docs/03-specs/DESIGN-NOTE-TEMPLATE.md"; then
+  pass "چهار پرسشِ آشنایی در قالبِ طراحی هست"
+else
+  bad "چهار پرسشِ آشنایی در DESIGN-NOTE-TEMPLATE.md نیست"
+fi
+
+echo ""
+echo "-- 6) L-59 باورهای سنجیده‌شده --"
 if [ -f "$GATE" ] && grep -qF "هر باورِ بنیان‌گذار" "$GATE"; then
   pass "قانون باور در دروازه ثبت است"
 else

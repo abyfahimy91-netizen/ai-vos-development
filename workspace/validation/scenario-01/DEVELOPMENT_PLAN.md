@@ -45,9 +45,7 @@ This document details the Development Plan for **Validation Scenario 01** within
 | **T3.1** | Security Hardening | High | T1.3, T2.1 | Middleware & Sanitizers |
 | **T3.2** | Unit & Integration Testing | Medium | T2.1, T2.2, T2.3 | Automated Test Suite |
 | **T4.1** | API & System Docs | Low | T3.1, T3.2 | OpenAPI / Redoc Specs |
-| **T4.2** | Session Recovery Test | High | T4.1 | Validation Report |
-
-## 4. Milestones
+| **T4.2** | Session Recovery Test | High | T4.1 | Validation Report | ## 4. Milestones
 
 - **M1: Foundation Ready** — Completed Tasks T1.1, T1.2, T1.3. Secure auth and database active.
 - **M2: Core Features Live** — Completed Tasks T2.1, T2.2, T2.3. End-to-end order flow functional.

@@ -22,9 +22,7 @@ transforming raw ideas into revenue-generating businesses.
 | Business Analysis | Validate ideas and market opportunities |
 | Revenue Model | Design monetization and pricing |
 | Product Design | Define product, MVP, and features |
-| Go-To-Market | Marketing, launch, and growth strategy |
-
-### Unified Boot Sequence
+| Go-To-Market | Marketing, launch, and growth strategy | ### Unified Boot Sequence
 
 - Single authoritative boot order in boot/SYSTEM.yaml.
 - All boot files aligned (AI-ENTRY, AI-BOOT-PROTOCOL).

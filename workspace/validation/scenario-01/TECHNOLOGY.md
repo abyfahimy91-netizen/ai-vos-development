@@ -15,9 +15,7 @@ Status: Approved
 | Styling | Custom CSS | Minimal, RTL control |
 | Font | Vazirmatn | Free, popular, readable |
 | Content | Markdown | Easy updates, version control |
-| Version Control | Git | Standard, GitHub integration |
-
----
+| Version Control | Git | Standard, GitHub integration | ---
 
 ## Rejected Alternatives
 
