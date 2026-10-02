@@ -1,0 +1,5 @@
+# محرمانه — هرگز commit نشود
+.env
+*.key
+*.pem
+secrets/

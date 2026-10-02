@@ -1,0 +1,12 @@
+.DS_Store
+*.bak
+*.pyc
+__pycache__/
+*.dump
+*.sql
+*.csv
+*.xlsx
+node_modules/
+.env
+*.key
+*.pem
